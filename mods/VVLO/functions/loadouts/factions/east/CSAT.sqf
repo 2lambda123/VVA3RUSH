@@ -45,10 +45,10 @@ _nvgs = ["O_NVGoggles_hex_F","O_NVGoggles_urb_F","O_NVGoggles_ghex_F","NVGoggles
 _facegear = ["G_O_Diving","G_B_Diving","G_Diving"]; // FACTION FACEGEAR
 _binoculars = ["Binocular","Laserdesignator_02","Laserdesignator_01_khk_F","Laserdesignator_02_ghex_F"]; // FACTION BINOCULARS
 _terminal = ["ItemGPS","O_UavTerminal"]; // FACTION TERMINALS
-_primaries = ["KATIBA","RAHIM","ZAFIR","NAVID","MAR-10","M320","STING","SDAR"]; // FACTION PRIMARY WEAPONS
+_primaries = ["KATIBA","KATIBA-CARBINE","CAR-95","CMR-76","RAHIM","ASP-1","CAR-95-1","ZAFIR","NAVID","CYRUS","MAR-10","M320","GM6-LYNX","STING","SDAR"]; // FACTION PRIMARY WEAPONS
 _secondaries = ["ROOK-40","ZUBR"]; // FACTION SECONDARY WEAPONS
-_launchers = ["RPG32","TITAN-COMPACT","TITAN"]; // FACTION LAUNCHER WEAPONS
- _roles = [ // ROLE,TRAITS,	VOICE, 					FACE, 					UNIFORM, HEADGEAR, BACKPACK, VEST, NVG, FACEGEAR, BINOCULAR, TERMINAL, PRIMARY, SECONDARY, LAUNCHER
+_launchers = ["RPG-42","TITAN-COMPACT","TITAN","9M135-VORONA"]; // FACTION LAUNCHER WEAPONS
+_roles = [ // ROLE,TRAITS,	VOICE, 					FACE, 					UNIFORM, HEADGEAR, BACKPACK, VEST, NVG, FACEGEAR, BINOCULAR, TERMINAL, PRIMARY, SECONDARY, LAUNCHER
 	["co",		-1,			selectRandom _voices,	selectRandom _faces,	4,	10,	-1,	-1,	0,	-1,	0,	0,	0,	1,	-1],
 	["sl",		-1,			selectRandom _voices,	selectRandom _faces,	0,	9,	-1,	-1,	0,	-1,	0,	0,	0,	1,	-1],
 	["ftl",		-1,			selectRandom _voices,	selectRandom _faces,	0,	0,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1],
