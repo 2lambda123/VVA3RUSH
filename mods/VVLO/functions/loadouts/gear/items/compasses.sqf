@@ -1,4 +1,4 @@
-_compasses = [
-	["ItemCompass","Compass"]
+_compasses = [ // CLASSNAME, TITLE
+	["ItemCompass","Compass"] // 1
 ];
 _compasses;

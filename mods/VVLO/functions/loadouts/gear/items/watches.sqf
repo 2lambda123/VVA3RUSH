@@ -1,4 +1,4 @@
-_watches = [
-	["ItemWatch"]
+_watches = [ // CLASSNAME, TITLE
+	["ItemWatch"] // 1
 ];
 _watches;

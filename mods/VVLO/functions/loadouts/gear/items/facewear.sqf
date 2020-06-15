@@ -1,4 +1,4 @@
-_facewear = [
+_facewear = [ // CLASSNAME, TITLE
 	["APR",""],
 	["balaclava",""],
 	["bandana",""],

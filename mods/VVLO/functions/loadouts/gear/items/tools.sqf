@@ -1,5 +1,5 @@
-_tools = [
-	["MineDetector","Mine Detector"],
-	["ToolKit","ToolKit"]
+_tools = [ // CLASSNAME, TITLE
+	["MineDetector","Mine Detector"], // 1
+	["ToolKit","ToolKit"] // 2
 ];
 _tools;

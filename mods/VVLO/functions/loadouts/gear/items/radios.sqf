@@ -1,4 +1,4 @@
-_radios = [
-	["ItemRadio","Radio"]
+_radios = [ // CLASSNAME, TITLE
+	["ItemRadio","Radio"] // 1
 ];
 _radios;
