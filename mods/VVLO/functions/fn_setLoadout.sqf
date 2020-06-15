@@ -10,6 +10,7 @@ _this addGoggles "G_Tactical_Clear"; // Add Glasses
 
 // GEAR Specific
 _this setFace "WhiteHead_01"; // Add Face
+[_this, "Male02GRE"] remoteExec ["setSpeaker", 0, _this]; // Add voice.
 _this forceAddUniform "U_O_CombatUniform_ocamo"; // Add Uniform
 _this addHeadGear "H_HelmetLeaderO_ocamo"; // Add Headgear
 _this addVest "V_TacVest_blk_POLICE"; // Add Vest
@@ -18,9 +19,11 @@ _this addBackpack "TK_RPG_Backpack_EP1"; // Add Backpack
 // ITEMS
 _this linkItem "ItemMap";
 _this linkItem "ItemCompass";
-_this linkItem "ItemRadio";
 _this linkItem "ItemWatch";
+
+_this linkItem "ItemRadio";
 _this linkItem "ItemGPS";
+
 _this addItem "MineDetector";
 _this addItem _firstaid;
 _this linkItem _uavterminal;
