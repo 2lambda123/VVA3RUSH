@@ -1,0 +1,10 @@
+_base = "";
+_name = "";
+_description = "";
+_calibre = "";
+_variants = [];
+_magazines = [];
+_scopes = [];
+_muzzles = [];
+_attachments = [];
+_bipods = [];

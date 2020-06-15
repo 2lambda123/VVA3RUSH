@@ -1,0 +1,17 @@
+_name = "SVD"; // https://en.wikipedia.org/wiki/Dragunov_sniper_rifle
+_year = 1963;
+_ammo = "7.62x54mm"; // https://en.wikipedia.org/wiki/7.62×54mmR
+_vanilla = [];
+_dlc = [];
+_cup = ["CUP_srifle_SVD","CUP_srifle_SVD_top_rail"];
+_cup_desert = ["CUP_srifle_SVD_des","CUP_srifle_SVD_des_top_rail"];
+_cup_woodland = ["CUP_srifle_SVD_wdl","CUP_srifle_SVD_wdl_top_rail"];
+_gm = ["gm_svd_wud"];
+_rhs = [];
+_baf = [];
+_magazines = [];
+_magazines_tracers = [];
+_optics = [];
+_muzzles = [];
+_bipods = [];
+_rail = [];
