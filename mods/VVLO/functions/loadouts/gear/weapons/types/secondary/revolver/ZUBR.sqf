@@ -22,4 +22,3 @@ _muzzles = [];
 _optics = [
 	"optic_Yorris" // 1
 ];
-getText

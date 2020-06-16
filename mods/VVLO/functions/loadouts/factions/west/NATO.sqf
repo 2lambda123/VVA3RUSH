@@ -2,13 +2,85 @@ _key = "NATO"; // FACTION TITLE https://armedassault.fandom.com/wiki/NATO
 _side = WEST; // FACTION SIDE
 _year = 2035; // FACTION YEAR
 _classname = "BLU_F"; // FACTION CLASSNAME
-_content = ["Vanilla","Tanoa","Mark"]; // FACTION CONTENT = Vanilla; DLC: TANOA,TANKS,MARKS,GM; MODS: CUP,RHS,BAF;
+_content = ["Vanilla","Tanoa","Mark","GM"]; // FACTION CONTENT = Vanilla; DLC: TANOA,TANKS,MARKS,GM; MODS: CUP,RHS,BAF;
 _climates = [0,1,2]; // "Arid","Urban","Lush": _environment selectRandom _environments; _uniform + _environment;
 _traits = [0,0,0,0]; // [ENG,EXP,MED,UAV] 0 = OFF, 1 = ON.
 _roles = ["co","sl","ftl","r","rat","gre","ar","aar","mmg","mmga","hmg","hmga","mat","mata","hat","hata","mrt","mrta","msam","msama","hsam","hsama","dm","sn","sp","med","eng","engm","eod","uav","div","car","smg","vc","vg","vd","p"]; // FACTION ROLES
-_voices = ["Male01PER","Male02PER","Male03PER"]; // FACTION VOICES
-_faces = ["PersianHead_A3_01","PersianHead_A3_02","PersianHead_A3_03"/*,"PersianHead_A3_04_a","PersianHead_A3_04_l","PersianHead_A3_04_sa"*/]; // FACTION FACES
-_uniforms = [ // CLASSNAME, TITLE
+_voices = [
+	"Male01ENG", // 0
+	"Male02ENG", // 1
+	"Male03ENG", // 2
+	"Male04ENG", // 3
+	"Male05ENG", // 4
+	"Male06ENG", // 5
+	"Male07ENG", // 6
+	"Male08ENG", // 7
+	"Male09ENG", // 8
+	"Male10ENG", // 9
+	"Male11ENG", // 10
+	"Male12ENG", // 11
+	"Male01ENGB", // 12
+	"Male02ENGB", // 13
+	"Male03ENGB", // 14
+	"Male04ENGB", // 15
+	"Male05ENGB", // 16
+	"CUP_D_Male01_GB_BAF", // 17
+	"CUP_D_Male02_GB_BAF", // 18
+	"CUP_D_Male03_GB_BAF", // 19
+	"CUP_D_Male04_GB_BAF", // 20
+	"CUP_D_Male05_GB_BAF", // 21
+	"CUP_D_Male01_EN", // 22
+	"CUP_D_Male02_EN", // 23
+	"CUP_D_Male03_EN", // 24
+	"CUP_D_Male04_EN", // 25
+	"CUP_D_Male05_EN" // 26
+]; // FACTION VOICES
+_faces = [
+	"WhiteHead_01", // 0
+	"WhiteHead_02", // 1
+	"WhiteHead_03", // 2
+	"WhiteHead_04", // 3
+	"WhiteHead_05", // 4
+	"WhiteHead_06", // 5
+	"WhiteHead_07", // 6
+	"WhiteHead_08", // 7
+	"WhiteHead_09", // 8
+	"WhiteHead_10", // 9
+	"WhiteHead_11", // 10
+	"WhiteHead_12", // 11
+	"WhiteHead_13", // 12
+	"WhiteHead_14", // 13
+	"WhiteHead_15", // 14
+	"WhiteHead_16", // 15
+	"WhiteHead_17", // 16
+	"WhiteHead_19", // 17
+	"WhiteHead_20", // 18
+	"WhiteHead_21", // 19
+	"WhiteHead_22_a", // 20 Aris Camo
+	"WhiteHead_22_l", // 21 Lush Camo
+	"WhiteHead_22_sa", // 22 Semi-Arid Camo
+	"gm_WhiteHead_01_camo_01", // 23
+	"gm_WhiteHead_02_camo_01", // 24
+	"gm_WhiteHead_03_camo_01", // 25
+	"gm_WhiteHead_04_camo_01", // 26
+	"gm_WhiteHead_05_camo_01", // 27
+	"gm_WhiteHead_06_camo_01", // 28
+	"gm_WhiteHead_07_camo_01", // 29
+	"gm_WhiteHead_08_camo_01", // 30
+	"gm_WhiteHead_09_camo_01", // 31
+	"gm_WhiteHead_10_camo_01", // 32
+	"gm_WhiteHead_11_camo_01", // 33
+	"gm_WhiteHead_12_camo_01", // 34
+	"gm_WhiteHead_13_camo_01", // 35
+	"gm_WhiteHead_14_camo_01", // 36
+	"gm_WhiteHead_15_camo_01", // 37
+	"gm_WhiteHead_16_camo_01", // 38
+	"gm_WhiteHead_17_camo_01", // 39
+	"gm_WhiteHead_19_camo_01", // 40
+	"gm_WhiteHead_20_camo_01", // 41
+	"gm_WhiteHead_21_camo_01" // 42
+]; // FACTION FACES
+_uniforms = [
 	"U_B_CombatUniform_mcam", // 1 MTP
 	"U_B_CombatUniform_mcam_tshirt", // 2 MTP Tee
 	"U_B_CombatUniform_mcam_vest", // 3 MTP
@@ -37,7 +109,7 @@ _uniforms = [ // CLASSNAME, TITLE
 	"U_B_T_Soldier_SL_F", // 26 Tropic
 	"U_B_Wetsuit" // 27
 ]; // FACTION UNIFORMS
-_headgear = [ // CLASSNAME, TITLE
+_headgear = [
 	"H_CrewHelmetHeli_B", // 1
 	"H_CrewHelmetHeli_O", // 2
 	"H_HelmetB", // 3
@@ -73,7 +145,7 @@ _headgear = [ // CLASSNAME, TITLE
 	"H_PilotHelmetFighter_B", // 33
 	"H_PilotHelmetHeli_B" // 34
 ]; // FACTION HEADGEAR
-_backpacks = [ // CLASSNAME, TITLE
+_backpacks = [
 	"B_AssaultPack_khk", // 1 Khaki
 	"B_AssaultPack_rgr", // 2 Green
 	"B_AssaultPack_sgg", // 3 Sage
@@ -141,7 +213,7 @@ _backpacks = [ // CLASSNAME, TITLE
 	"B_RadioBag_01_tropic_F", // 65 Tropic
 	"B_RadioBag_01_black_F" // 66 Black
 ]; // FACTION BACKPACKS
-_vests = [ // CLASSNAME, TITLE
+_vests = [
 	"V_BandollierB_blk", // 1 Black
 	"V_BandollierB_cbr", // 2 Coyote
 	"V_BandollierB_khk", // 3 Khaki
@@ -182,9 +254,9 @@ _vests = [ // CLASSNAME, TITLE
 	"V_TacVestCamo_khk", // 37
 	"V_TacVestIR_blk" // 38
 ]; // FACTION VESTS
-_primaries = ["KATIBA","KATIBAC","CAR95","CMR76","RAHIM","ASP1","CAR951","ZAFIR","NAVID","CYRUS","MAR10","M320","GM6LYNX","STING","SDAR"]; // FACTION PRIMARY WEAPONS
-_secondaries = ["ROOK","ZUBR"]; // FACTION SECONDARY WEAPONS
-_launchers = ["RPG42","TITANC","TITAN","9M135"]; // FACTION LAUNCHER WEAPONS
+_primaries = []; // FACTION PRIMARY WEAPONS
+_secondaries = []; // FACTION SECONDARY WEAPONS
+_launchers = []; // FACTION LAUNCHER WEAPONS
 _roles = [ // ROLE, TRAITS, VOICE, FACE, UNIFORM, HEADGEAR, BACKPACK, VEST, NVG, FACEWEAR, BINOCULAR, TERMINAL, PRIMARY, SECONDARY, LAUNCHER, MEDICAL, CHEMLIGHTS, SMOKES, GRENADES, EXPLOSIVES, MINES, COMPASS, MAP, WATCH, RADIO, TOOLS
 	["co",		-1,			selectRandom _voices,	selectRandom _faces,	4,	10,	-1,	-1,	0,	-1,	0,	0,	0,	1,	-1,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],
 	["sl",		-1,			selectRandom _voices,	selectRandom _faces,	0,	9,	-1,	-1,	0,	-1,	0,	0,	0,	1,	-1,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],

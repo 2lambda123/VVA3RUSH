@@ -34,13 +34,14 @@ addons[]=
 	"A3_Structures_F_Walls",
 	"A3_Structures_F_Mil_Flags",
 	"A3_Weapons_F_Ammoboxes",
+	"ace_logistics_wirecutter",
 	"A3_Signs_F_Signs_Ad"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=6;
+		items=7;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -77,6 +78,13 @@ class AddonsMetaData
 			url="https://www.arma3.com";
 		};
 		class Item5
+		{
+			className="ace_logistics_wirecutter";
+			name="ACE3 - Logistics Wire Cutter";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item6
 		{
 			className="A3_Signs_F";
 			name="Arma 3 - Signs";
@@ -162,6 +170,8 @@ class Mission
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
+		wavesForced=1;
+		windForced=1;
 		year=2020;
 		month=6;
 		hour=13;
