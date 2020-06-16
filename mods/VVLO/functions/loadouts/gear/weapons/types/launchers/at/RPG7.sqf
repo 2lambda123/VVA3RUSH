@@ -1,4 +1,4 @@
-_key = "RPG-7";
+_key = "RPG7";
 _name = "RPG-7";
 _year = 1961; // https://en.wikipedia.org/wiki/RPG-7
 _side = EAST;

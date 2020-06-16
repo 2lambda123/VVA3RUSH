@@ -1,15 +1,13 @@
-_key = "P07";
-_name = "P07 9 mm"; // https://armedassault.fandom.com/wiki/P07_9_mm
-_year = 1997; // https://en.wikipedia.org/wiki/Walther_P99
-_sides = [WEST,INDEPENDENT];
-_content = ["Vanilla","Apex"];
+_key = "STARTER";
+_name = "Starter Pistol"; // https://armedassault.fandom.com/wiki/Starter_Pistol
+_year = 2003; // https://en.wikipedia.org/wiki/MP-443_Grach
+_sides = [EAST];
+_content = ["Vanilla"];
 _type = "Pistol";
-_factions = ["NATO","CTRG","Gendarmerie"];
+_factions = ["CSAT","Viper"];
 _variants = [
-	["hgun_P07_F","P07 9 mm"], // 1
-	["hgun_P07_snds_F","P07 9 mm"], // 2
-	["hgun_P07_khk_F","P07 9 mm (Khaki)"], // 3
-	["hgun_P07_khk_Snds_F","P07 9 mm (Khaki)"] // 4
+	["hgun_Rook40_F","Rook-40 9 mm"], // 1
+	["hgun_Rook40_snds_F","Rook-40 9 mm"] // 2
 ];
 _magazines = [
 	["16Rnd_9x21_Mag","9 mm 16Rnd Mag"] // 1

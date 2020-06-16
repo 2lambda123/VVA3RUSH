@@ -1,4 +1,4 @@
-_key = "RPG-42";
+_key = "RPG42";
 _name = "RPG-42 Alamut";
 _year = 2012; // https://en.wikipedia.org/wiki/RPG-32
 _side = EAST;

@@ -1,4 +1,4 @@
-_key = "9M135-VORONA";
+_key = "9M135";
 _name = "9M135 Vorona"; // https://armedassault.fandom.com/wiki/9M135_Vorona
 _year = 1992; // https://en.wikipedia.org/wiki/9K115-2_Metis-M
 _sides = [EAST];
