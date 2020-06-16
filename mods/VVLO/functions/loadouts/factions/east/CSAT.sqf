@@ -1,10 +1,9 @@
-/* TODO: MAGAZINES, GRENADES, ITEMS, MINES, EXPLOSIVES, TRAIT ITEMS, UNIVERSAL ITEMS */
 _name = "CSAT"; // FACTION TITLE https://armedassault.fandom.com/wiki/CSAT
 _side = EAST; // FACTION SIDE
 _year = 2035; // FACTION YEAR
 _classname = "OPF_F"; // FACTION CLASSNAME
 _content = ["Vanilla","Tanoa","Mark"]; // FACTION CONTENT = Vanilla; DLC: TANOA,TANKS,MARKS,GM; MODS: CUP,RHS,BAF;
-_environments = [0,1,2]; // "Arid","Urban","Lush": _environment selectRandom _environments; _uniform + _environment;
+_climates = [0,1,2]; // "Arid","Urban","Lush": _environment selectRandom _environments; _uniform + _environment;
 _traits = [0,0,0,0]; // [ENG,EXP,MED,UAV] 0 = OFF, 1 = ON.
 _roles = ["co","sl","ftl","r","rat","gre","ar","aar","mmg","mmga","hmg","hmga","mat","mata","hat","hata","mrt","mrta","msam","msama","hsam","hsama","dm","sn","sp","med","eng","engm","eod","uav","div","car","smg","vc","vg","vd","p"]; // FACTION ROLES
 _voices = ["Male01PER","Male02PER","Male03PER"]; // FACTION VOICES

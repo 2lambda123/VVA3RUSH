@@ -2,58 +2,47 @@
 Description: Loads function scripts for VVM module.
 Authors: vigil.vindex@gmail.com
 License: https://creativecommons.org/licenses/by-sa/4.0/
-Created: 2016/08/09 Updated: 2016/08/15 Version: 0.0.1
+Created: 2016/08/09 Updated: 2020/06/16 Version: 0.0.1
 */
 class VVM {
 	tag = "VVM";
-  class create {
-    file = "mods\VVM\functions\create";
-    class createArsenal {};
-    class createBodylight {};
+  class ai {
+    file = "mods\VVM\functions\ai";
+  };
+  class briefing {
+    file = "mods\VVM\functions\briefing";
+  };
+  class compositions {
+    file = "mods\VVM\functions\ai";
     class createFlagpole {};
     class createGarage {};
-    class createGroup {};
-    class createMarker {};
-    class createObjective {};
-    class createSmoke {};
-    class createTask {};
-    class createTrigger {};
-    class createUnit {};
-    class createVehicle {};
     class createVVS {};
-    class createWall {};
-    class createWaypoint {};
   };
-  class get {
-    file = "mods\VVM\functions\get";
-    class getClassGroups {};
-    class getClassUnits {};
-    // class getClassVehicles {};
-    class getFactionArray {};
-    class getGroupTypeClasses {};
-    class getGroupTypes {};
-    class getMapArea {};
-    class getMapCenter {};
-    class getMapCenterPosition {};
-    class getMapDynamicLocations {};
-    class getMapDynamicRoads {};
+  class environment {
+    file = "mods\VVM\functions\environment";
+  };
+  class locations {
+    file = "mods\VVM\functions\locations";
+    class getSafePosition {};
     class getMapLocations {};
-    class getMapMilitaryBuildings {};
-    class getMapSize {};
-    class getMapUnderwaterWrecks {};
-    class getPositionBuildingPositions {};
-    class getRandomRange {};
-    class getSideArray {};
-    class getSkillMM {};
   };
-  class set {
-    file = "mods\VVM\functions\set";
-    class setAiGroupSkill {};
-    class setPosition {};
+  class markers {
+    file = "mods\VVM\functions\markers";
+    class createMarker {};
     class setRespawnMarkerAlpha {};
   };
-  class test {
-    file = "mods\VVM\functions\test";
-    class testIfCase {};
+  class modules {
+    file = "mods\VVM\functions\modules";
+  };
+  class tasks {
+    file = "mods\VVM\functions\task";
+  };
+  class triggers {
+    file = "mods\VVM\functions\triggers";
+    class createTrigger {};
+  };
+  class waypoints {
+    file = "mods\VVM\functions\waypoints";
+    class createWaypoint {};
   };
 };
