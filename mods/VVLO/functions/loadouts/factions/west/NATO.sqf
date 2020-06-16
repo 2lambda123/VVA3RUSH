@@ -1,4 +1,4 @@
-_name = "NATO"; // FACTION TITLE https://armedassault.fandom.com/wiki/NATO
+_key = "NATO"; // FACTION TITLE https://armedassault.fandom.com/wiki/NATO
 _side = WEST; // FACTION SIDE
 _year = 2035; // FACTION YEAR
 _classname = "BLU_F"; // FACTION CLASSNAME
@@ -9,185 +9,182 @@ _roles = ["co","sl","ftl","r","rat","gre","ar","aar","mmg","mmga","hmg","hmga","
 _voices = ["Male01PER","Male02PER","Male03PER"]; // FACTION VOICES
 _faces = ["PersianHead_A3_01","PersianHead_A3_02","PersianHead_A3_03"/*,"PersianHead_A3_04_a","PersianHead_A3_04_l","PersianHead_A3_04_sa"*/]; // FACTION FACES
 _uniforms = [ // CLASSNAME, TITLE
-	["U_B_CombatUniform_mcam","Combat Fatigues (MTP)"], // 1
-	["U_B_CombatUniform_mcam_tshirt","Combat Fatigues (MTP) (Tee)"], // 2
-	["U_B_CombatUniform_mcam_vest","Recon Fatigues (MTP)"], // 3
-	["U_B_CombatUniform_mcam_wdl_f","Combat Fatigues (Woodland)"], // 4
-	["U_B_CombatUniform_mcam_worn","Worn Combat Fatigues (MTP)"], // 5
-	["U_B_CombatUniform_sgg","Combat Fatigues (MTP)"], // 6
-	["U_B_CombatUniform_sgg_tshirt","Combat Fatigues (MTP) (Tee)"], // 7
-	["U_B_CombatUniform_sgg_vest","Recon Fatigues (MTP)"], // 8
-	["U_B_CombatUniform_tshirt_mcam_wdL_f","Combat Fatigues (Woodland, Tee)"], // 9
-	["U_B_CombatUniform_vest_mcam_wdl_f","Recon Fatigues (Woodland)"], // 10
-	["U_B_CombatUniform_wdl","Combat Fatigues (MTP)"], // 11
-	["U_B_CombatUniform_wdl_tshirt","Combat Fatigues (MTP) (Tee)"], // 12
-	["U_B_CombatUniform_wdl_vest","Recon Fatigues (MTP)"], // 13
-	["U_B_FullGhillie_ard","Full Ghillie (Arid) [NATO]"], // 14
-	["U_B_FullGhillie_lsh","Full Ghillie (Lush) [NATO]"], // 15
-	["U_B_FullGhillie_sard","Full Ghillie (Semi-Arid) [NATO]"], // 16
-	["U_B_T_FullGhillie_tna_F","Full Ghillie (Jungle) [NATO]"], // 17
-	["U_B_GhillieSuit","Ghillie Suit [NATO]"], // 18
-	["U_B_T_Sniper_F","Ghillie Suit (Tropic) [NATO]"], // 19
-	["U_B_HeliPilotCoveralls","Heli Pilot Coveralls [NATO]"], // 20
-	["U_B_PilotCoveralls","Pilot Coveralls [NATO]"], // 21
-	["U_B_SpecopsUniform_sgg","Specop Fatigues (Sage)"], // 22
-	["U_B_survival_uniform","Survival Fatigues"], // 23
-	["U_B_T_Soldier_AR_F","Combat Fatigues (Tropic, Tee)"], // 24
-	["U_B_T_Soldier_F","Combat Fatigues (Tropic)"], // 25
-	["U_B_T_Soldier_SL_F","Recon Fatigues (Tropic)"], // 26
-	["U_B_Wetsuit","Wetsuit [NATO]"] // 27
+	"U_B_CombatUniform_mcam", // 1 MTP
+	"U_B_CombatUniform_mcam_tshirt", // 2 MTP Tee
+	"U_B_CombatUniform_mcam_vest", // 3 MTP
+	"U_B_CombatUniform_mcam_wdl_f", // 4 Woodland
+	"U_B_CombatUniform_mcam_worn", // 5 MTP
+	"U_B_CombatUniform_sgg", // 6 MTP
+	"U_B_CombatUniform_sgg_tshirt", // 7 MTP Tee
+	"U_B_CombatUniform_sgg_vest", // 8 MTP
+	"U_B_CombatUniform_tshirt_mcam_wdL_f", // 9 Woodland Tee
+	"U_B_CombatUniform_vest_mcam_wdl_f", // 10 Woodland
+	"U_B_CombatUniform_wdl", // 11 MTP
+	"U_B_CombatUniform_wdl_tshirt", // 12 MTP Tee
+	"U_B_CombatUniform_wdl_vest", // 13 MTP
+	"U_B_FullGhillie_ard", // 14 Arid
+	"U_B_FullGhillie_lsh", // 15 Lush
+	"U_B_FullGhillie_sard", // 16 Semi-Arid
+	"U_B_T_FullGhillie_tna_F", // 17 Jungle
+	"U_B_GhillieSuit", // 18
+	"U_B_T_Sniper_F", // 19 Tropic
+	"U_B_HeliPilotCoveralls", // 20
+	"U_B_PilotCoveralls", // 21
+	"U_B_SpecopsUniform_sgg", // 22
+	"U_B_survival_uniform", // 23
+	"U_B_T_Soldier_AR_F", // 24 Tropic Tee
+	"U_B_T_Soldier_F", // 25 Tropic
+	"U_B_T_Soldier_SL_F", // 26 Tropic
+	"U_B_Wetsuit" // 27
 ]; // FACTION UNIFORMS
 _headgear = [ // CLASSNAME, TITLE
-	["H_CrewHelmetHeli_B","Heli Crew Helmet [NATO]"], // 1
-	["H_CrewHelmetHeli_O","Heli Crew Helmet [CSAT]"], // 2
-	["H_HelmetB","Combat Helmet"], // 3
-	["H_HelmetB_black","Combat Helmet (Black)"], // 4
-	["H_HelmetB_camo","Combat Helmet (Camo)"], // 5
-	["H_HelmetB_desert","Combat Helmet (Desert)"], // 6
-	["H_HelmetB_Enh_tna_F","Enhanced Combat Helmet (Tropic)"], // 7
-	["H_HelmetB_grass","Combat Helmet (Grass)"], // 8
-	["H_HelmetB_light","Light Combat Helmet"], // 9
-	["H_HelmetB_light_black","Light Combat Helmet (Black)"], // 10
-	["H_HelmetB_light_desert","Light Combat Helmet (Desert)"], // 11
-	["H_HelmetB_light_grass","Light Combat Helmet (Grass)"], // 12
-	["H_HelmetB_light_sand","Light Combat Helmet (Sand)"], // 13
-	["H_HelmetB_light_snakeskin","Light Combat Helmet (Snakeskin)"], // 14
-	["H_HelmetB_Light_tna_F","Light Combat Helmet (Tropic)"], // 15
-	["H_HelmetB_light_wdl","Light Combat Helmet (Woodland)"], // 16
-	["H_HelmetB_paint","Combat Helmet (Spraypaint)"], // 17
-	["H_HelmetB_plain_blk","Combat Helmet (Black)"], // 18
-	["H_HelmetB_plain_mcamo","Combat Helmet (Camo)"], // 19
-	["H_HelmetB_plain_wdl","Combat Helmet (Woodland)"], // 20
-	["H_HelmetB_sand","Combat Helmet (Sand)"], // 21
-	["H_HelmetB_snakeskin","Combat Helmet (Snakeskin)"], // 22
-	["H_HelmetB_TI_tna_F","Stealth Combat Helmet"], // 23
-	["H_HelmetB_tna_F","Combat Helmet (Tropic)"], // 24
-	["H_HelmetCrew_B","Crew Helmet [NATO]"], // 25
-	["H_HelmetSpecB","Enhanced Combat Helmet"], // 26
-	["H_HelmetSpecB_blk","Enhanced Combat Helmet (Black)"], // 27
-	["H_HelmetSpecB_paint1","Enhanced Combat Helmet (Grass)"], // 28
-	["H_HelmetSpecB_paint2","Enhanced Combat Helmet (Desert)"], // 29
-	["H_HelmetSpecB_sand","Enhanced Combat Helmet (Sand)"], // 30
-	["H_HelmetSpecB_snakeskin","Enhanced Combat Helmet (Snakeskin)"], // 31
-	["H_HelmetSpecB_wdl","Enhanced Combat Helmet (Woodland)"], // 32
-	["H_PilotHelmetFighter_B","Pilot Helmet [NATO]"], // 33
-	["H_PilotHelmetHeli_B","Heli Pilot Helmet [NATO]"] // 34
+	"H_CrewHelmetHeli_B", // 1
+	"H_CrewHelmetHeli_O", // 2
+	"H_HelmetB", // 3
+	"H_HelmetB_black", // 4 Black
+	"H_HelmetB_camo", // 5 Camo
+	"H_HelmetB_desert", // 6 Desert
+	"H_HelmetB_Enh_tna_F", // 7 Tropic
+	"H_HelmetB_grass", // 8 Grass
+	"H_HelmetB_light", // 9
+	"H_HelmetB_light_black", // 10 Black
+	"H_HelmetB_light_desert", // 11 Desert
+	"H_HelmetB_light_grass", // 12 Grass
+	"H_HelmetB_light_sand", // 13 Sand
+	"H_HelmetB_light_snakeskin", // 14 Snakeskin
+	"H_HelmetB_Light_tna_F", // 15 Tropic
+	"H_HelmetB_light_wdl", // 16 Woodland
+	"H_HelmetB_paint", // 17 Spraypaint
+	"H_HelmetB_plain_blk", // 18 Black
+	"H_HelmetB_plain_mcamo", // 19 Camo
+	"H_HelmetB_plain_wdl", // 20 Woodland
+	"H_HelmetB_sand", // 21 Sand
+	"H_HelmetB_snakeskin", // 22 Snakeskin
+	"H_HelmetB_TI_tna_F", // 23
+	"H_HelmetB_tna_F", // 24 Tropic
+	"H_HelmetCrew_B", // 25
+	"H_HelmetSpecB", // 26
+	"H_HelmetSpecB_blk", // 27 Black
+	"H_HelmetSpecB_paint1", // 28 Grass
+	"H_HelmetSpecB_paint2", // 29 Desert
+	"H_HelmetSpecB_sand", // 30 Sand
+	"H_HelmetSpecB_snakeskin", // 31 Snakeskin
+	"H_HelmetSpecB_wdl", // 32 Woodland
+	"H_PilotHelmetFighter_B", // 33
+	"H_PilotHelmetHeli_B" // 34
 ]; // FACTION HEADGEAR
 _backpacks = [ // CLASSNAME, TITLE
-	["B_AssaultPack_khk","Assault Pack (Khaki)"], // 1
-	["B_AssaultPack_rgr","Assault Pack (Green)"], // 2
-	["B_AssaultPack_sgg","Assault Pack (Sage)"], // 3
-	["B_AssaultPack_blk","Assault Pack (Black)"], // 4
-	["B_AssaultPack_cbr","Assault Pack (Coyote)"], // 5
-	["B_AssaultPack_mcamo","Assault Pack (MTP)"], // 6
-	["B_AssaultPack_tna_F","Assault Pack (Tropic)"], // 7
-	["B_AssaultPack_wdl_F","Assault Pack (Woodland)"], // 8
-	["B_Kitbag_rgr","Kitbag (Green)"], // 9
-	["B_Kitbag_mcamo","Kitbag (MTP)"], // 10
-	["B_Kitbag_sgg","Kitbag (Sage)"], // 11
-	["B_Kitbag_cbr","Kitbag (Coyote)"], // 12
-	["B_Kitbag_tan","Kitbag (Tan)"], // 13
-	["B_TacticalPack_rgr","Tactical Backpack (Green)"], // 14
-	["B_TacticalPack_mcamo","Tactical Backpack (MTP)"], // 15
-	["B_TacticalPack_blk","Tactical Backpack (Black)"], // 16
-	["B_TacticalPack_oli","Tactical Backpack (Olive)"], // 17
-	["B_FieldPack_khk","Field Pack (Khaki)"], // 18
-	["B_FieldPack_oli","Field Pack (Olive)"], // 19
-	["B_FieldPack_cbr","Field Pack (Coyote)"], // 20
-	["B_FieldPack_blk","Field Pack (Black)"], // 21
-	["B_FieldPack_green_F","Field Pack (Green)"], // 22
-	["B_FieldPack_taiga_F","Field Pack (Taiga)"], // 23
-	["B_Carryall_oli","Carryall Backpack (Olive)"], // 24
-	["B_Carryall_mcamo","Carryall Backpack (MTP)"], // 25
-	["B_Carryall_khk","Carryall Backpack (Khaki)"], // 26
-	["B_Carryall_cbr","Carryall Backpack (Coyote)"], // 27
-	["B_Carryall_green_F","Carryall Backpack (Green)"], // 28
-	["B_Carryall_taiga_F","Carryall Backpack (Taiga)"], // 29
-	["B_Carryall_wdl_F","Carryall Backpack (Woodland)"], // 30
-	["B_Bergen_sgg","Bergen (Sage)"], // 31
-	["B_Bergen_mcamo","Bergen (MTP)"], // 32
-	["B_Bergen_rgr","Bergen (Green)"], // 33
-	["B_Bergen_blk","Bergen (Black)"], // 34
-	["B_Bergen_mcamo_F","Bergen Backpack (MTP)"], // 35
-	["B_Bergen_tna_F","Bergen Backpack (Tropic)"], // 36
-	["B_B_Parachute_02_F","Steerable Parachute"], // 37
-	["B_HMG_01_support_F","Folded Tripod [NATO]"], // 38
-	["B_HMG_01_support_grn_F","Folded Tripod (Green) [NATO]"], // 39
-	["B_HMG_01_support_high_F","Folded Tripod (Raised) [NATO]"], // 40
-	["B_HMG_01_weapon_F","Dismantled Mk30 HMG [NATO]"], // 41
-	["B_HMG_01_Weapon_grn_F","Dismantled Mk30 HMG (Green) [NATO]"], // 42
-	["B_HMG_01_A_weapon_F","Dismantled Autonomous MG [NATO]"], // 43
-	["B_GMG_01_weapon_F","Dismantled Mk32 GMG [NATO]"], // 44
-	["B_GMG_01_Weapon_grn_F","Dismantled Mk32 GMG (Green) [NATO]"], // 45
-	["B_GMG_01_A_weapon_F","Dismantled Autonomous GMG [NATO]"], // 46
-	["B_HMG_01_high_weapon_F","Dismantled Mk30 HMG (Raised) [NATO]"], // 47
-	["B_GMG_01_high_weapon_F","Dismantled Mk32 GMG (Raised) [NATO]"], // 48
-	["B_Mortar_01_support_F","Folded Mk6 Mortar Bipod [NATO]"], // 49
-	["B_Mortar_01_support_grn_F","Folded Mortar Mk6 Bipod (Green) [NATO]"], // 50
-	["B_Mortar_01_weapon_F","Folded Mk6 Mortar Tube [NATO]"], // 51
-	["B_Mortar_01_Weapon_grn_F","Folded Mk6 Mortar Tube (Green) [NATO]"], // 52
-	["B_AA_01_weapon_F","Static Titan Launcher (AA) [NATO]"], // 53
-	["B_AT_01_weapon_F","Static Titan Launcher (AT) [NATO]"], // 54
-	["B_UAV_01_backpack_F","UAV Bag (AR-2) [NATO]"], // 55
-	["B_UAV_06_backpack_F","UAV Bag (AL-6) [NATO]"], // 56
-	["B_ViperHarness_blk_F","Viper Harness (Black)"], // 57
-	["B_ViperHarness_khk_F","Viper Harness (Khaki)"], // 58
-	["B_ViperHarness_oli_F","Viper Harness (Olive)"], // 59
-	["B_ViperLightHarness_blk_F","Viper Light Harness (Black)"], // 60
-	["B_ViperLightHarness_khk_F","Viper Light Harness (Khaki)"], // 61
-	["B_ViperLightHarness_oli_F","Viper Light Harness (Olive)"], // 62
-	["B_RadioBag_01_wdl_F","Radio Pack (Woodland) [NATO]"], // 63
-	["B_RadioBag_01_mtp_F","Radio Pack (MTP) [NATO]"], // 64
-	["B_RadioBag_01_tropic_F","Radio Pack (Tropic) [NATO]"], // 65
-	["B_RadioBag_01_black_F","Radio Pack (Black)"] // 66
+	"B_AssaultPack_khk", // 1 Khaki
+	"B_AssaultPack_rgr", // 2 Green
+	"B_AssaultPack_sgg", // 3 Sage
+	"B_AssaultPack_blk", // 4 Black
+	"B_AssaultPack_cbr", // 5 Coyote
+	"B_AssaultPack_mcamo", // 6 MTP
+	"B_AssaultPack_tna_F", // 7 Tropic
+	"B_AssaultPack_wdl_F", // 8 Woodland
+	"B_Kitbag_rgr", // 9 Green
+	"B_Kitbag_mcamo", // 10 MTP
+	"B_Kitbag_sgg", // 11 Sage
+	"B_Kitbag_cbr", // 12 Coyote
+	"B_Kitbag_tan", // 13 Tan
+	"B_TacticalPack_rgr", // 14 Green
+	"B_TacticalPack_mcamo", // 15 MTP
+	"B_TacticalPack_blk", // 16 Black
+	"B_TacticalPack_oli", // 17 Olive
+	"B_FieldPack_khk", // 18 Khaki
+	"B_FieldPack_oli", // 19 Olive
+	"B_FieldPack_cbr", // 20 Coyote
+	"B_FieldPack_blk", // 21 Black
+	"B_FieldPack_green_F", // 22 Green
+	"B_FieldPack_taiga_F", // 23 Taiga
+	"B_Carryall_oli", // 24 Olive
+	"B_Carryall_mcamo", // 25 MTP
+	"B_Carryall_khk", // 26 Khaki
+	"B_Carryall_cbr", // 27 Coyote
+	"B_Carryall_green_F", // 28 Green
+	"B_Carryall_taiga_F", // 29 Taiga
+	"B_Carryall_wdl_F", // 30 Woodland
+	"B_Bergen_sgg", // 31 Sage
+	"B_Bergen_mcamo", // 32 MTP
+	"B_Bergen_rgr", // 33 Green
+	"B_Bergen_blk", // 34 Black
+	"B_Bergen_mcamo_F", // 35 MTP
+	"B_Bergen_tna_F", // 36 Tropic
+	"B_B_Parachute_02_F", // 37
+	"B_HMG_01_support_F", // 38
+	"B_HMG_01_support_grn_F", // 39 Green
+	"B_HMG_01_support_high_F", // 40 Green
+	"B_HMG_01_weapon_F", // 41 Green
+	"B_HMG_01_Weapon_grn_F", // 42 Green
+	"B_HMG_01_A_weapon_F", // 43 Green
+	"B_GMG_01_weapon_F", // 44 Green
+	"B_GMG_01_Weapon_grn_F", // 45 Green
+	"B_GMG_01_A_weapon_F", // 46 Green
+	"B_HMG_01_high_weapon_F", // 47 Green
+	"B_GMG_01_high_weapon_F", // 48 Green
+	"B_Mortar_01_support_F", // 49 Green
+	"B_Mortar_01_support_grn_F", // 50 Green
+	"B_Mortar_01_weapon_F", // 51 Green
+	"B_Mortar_01_Weapon_grn_F", // 52 Green
+	"B_AA_01_weapon_F", // 53 Green
+	"B_AT_01_weapon_F", // 54 Green
+	"B_UAV_01_backpack_F", // 55 Green
+	"B_UAV_06_backpack_F", // 56 Green
+	"B_ViperHarness_blk_F", // 57 Black
+	"B_ViperHarness_khk_F", // 58 Khaki
+	"B_ViperHarness_oli_F", // 59 Olive
+	"B_ViperLightHarness_blk_F", // 60 Black
+	"B_ViperLightHarness_khk_F", // 61 Khaki
+	"B_ViperLightHarness_oli_F", // 62 Olive
+	"B_RadioBag_01_wdl_F", // 63 Woodland
+	"B_RadioBag_01_mtp_F", // 64 MTP
+	"B_RadioBag_01_tropic_F", // 65 Tropic
+	"B_RadioBag_01_black_F" // 66 Black
 ]; // FACTION BACKPACKS
 _vests = [ // CLASSNAME, TITLE
-	["V_BandollierB_blk","Slash Bandolier (Black)"], // 1
-	["V_BandollierB_cbr","Slash Bandolier (Coyote)"], // 2
-	["V_BandollierB_khk","Slash Bandolier (Khaki)"], // 3
-	["V_BandollierB_oli","Slash Bandolier (Olive)"], // 4
-	["V_BandollierB_rgr","Slash Bandolier (Green)"], // 5
-	["V_Chestrig_blk","Chest Rig (Black)"], // 6
-	["V_Chestrig_khk","Chest Rig (Khaki)"], // 7
-	["V_Chestrig_oli","Chest Rig (Olive)"], // 8
-	["V_Chestrig_rgr","Chest Rig (Green)"], // 9
-	["V_PlateCarrier1_blk","Carrier Lite (Black)"], // 10
-	["V_PlateCarrier1_rgr","Carrier Lite (Green)"], // 11
-	["V_PlateCarrier1_rgr_noflag_F","Carrier Lite (Green, No Flag)"], // 12
-	["V_PlateCarrier1_tna_F","Carrier Lite (Tropic)"], // 13
-	["V_PlateCarrier1_wdl","Carrier Lite (Woodland)"], // 14
-	["V_PlateCarrier2_blk","Carrier Rig (Black)"], // 15
-	["V_PlateCarrier2_rgr","Carrier Rig (Green)"], // 16
-	["V_PlateCarrier2_rgr_noflag_F","Carrier Rig (Green, No Flag)"], // 17
-	["V_PlateCarrier2_tna_F","Carrier Rig (Tropic)"], // 18
-	["V_PlateCarrier2_wdl","Carrier Rig (Woodland)"], // 19
-	["V_PlateCarrier3_rgr","Carrier Rig (Green)"], // 20
-	["V_PlateCarrierGL_blk","Carrier GL Rig (Black)"], // 21
-	["V_PlateCarrierGL_mtp","Carrier GL Rig (MTP)"], // 22
-	["V_PlateCarrierGL_rgr","Carrier GL Rig (Green)"], // 22
-	["V_PlateCarrierGL_tna_F","Carrier GL Rig (Tropic)"], // 23
-	["V_PlateCarrierGL_wdl","Carrier GL Rig (Woodland)"], // 24
-	["V_PlateCarrierSpec_blk","Carrier Special Rig (Black)"], // 25
-	["V_PlateCarrierSpec_mtp","Carrier Special Rig (MTP)"], // 26
-	["V_PlateCarrierSpec_rgr","Carrier Special Rig (Green)"], // 27
-	["V_PlateCarrierSpec_tna_F","Carrier Special Rig (Tropic)"], // 28
-	["V_PlateCarrierSpec_wdl","Carrier Special Rig (Woodland)"], // 29
-	["V_Rangemaster_belt","Rangemaster Belt"], // 30
-	["V_RebreatherB","Rebreather [NATO]"], // 31
-	["V_TacVest_blk","Tactical Vest (Black)"], // 32
-	["V_TacVest_brn","Tactical Vest (Brown)"], // 33
-	["V_TacVest_camo","Tactical Vest (Camo)"], // 34
-	["V_TacVest_khk","Tactical Vest (Khaki)"], // 35
-	["V_TacVest_oli","Tactical Vest (Olive)"], // 36
-	["V_TacVestCamo_khk","Camouflaged Vest"], // 37
-	["V_TacVestIR_blk","Raven Vest"] // 38
+	"V_BandollierB_blk", // 1 Black
+	"V_BandollierB_cbr", // 2 Coyote
+	"V_BandollierB_khk", // 3 Khaki
+	"V_BandollierB_oli", // 4 Olive
+	"V_BandollierB_rgr", // 5 Green
+	"V_Chestrig_blk", // 6 Black
+	"V_Chestrig_khk", // 7 Khaki
+	"V_Chestrig_oli", // 8 Olive
+	"V_Chestrig_rgr", // 9 Green
+	"V_PlateCarrier1_blk", // 10 Black
+	"V_PlateCarrier1_rgr", // 11 Green
+	"V_PlateCarrier1_rgr_noflag_F", // 12 Green
+	"V_PlateCarrier1_tna_F", // 13 Tropic
+	"V_PlateCarrier1_wdl", // 14 Woodland
+	"V_PlateCarrier2_blk", // 15 Black
+	"V_PlateCarrier2_rgr", // 16 Green
+	"V_PlateCarrier2_rgr_noflag_F", // 17 Green
+	"V_PlateCarrier2_tna_F", // 18 Tropic
+	"V_PlateCarrier2_wdl", // 19 Woodland
+	"V_PlateCarrier3_rgr", // 20 Green
+	"V_PlateCarrierGL_blk", // 21 Black
+	"V_PlateCarrierGL_mtp", // 22 MTP
+	"V_PlateCarrierGL_rgr", // 22 Green
+	"V_PlateCarrierGL_tna_F", // 23 Tropic
+	"V_PlateCarrierGL_wdl", // 24 Woodland
+	"V_PlateCarrierSpec_blk", // 25 Black
+	"V_PlateCarrierSpec_mtp", // 26 MTP
+	"V_PlateCarrierSpec_rgr", // 27 Green
+	"V_PlateCarrierSpec_tna_F", // 28 Tropic
+	"V_PlateCarrierSpec_wdl", // 29 Woodland
+	"V_Rangemaster_belt", // 30
+	"V_RebreatherB", // 31
+	"V_TacVest_blk", // 32 Black
+	"V_TacVest_brn", // 33 Brown
+	"V_TacVest_camo", // 34 Camo
+	"V_TacVest_khk", // 35 Khaki
+	"V_TacVest_oli", // 36 Olive
+	"V_TacVestCamo_khk", // 37
+	"V_TacVestIR_blk" // 38
 ]; // FACTION VESTS
-_primaries = ["KATIBA","KATIBA-CARBINE","CAR-95","CMR-76","RAHIM","ASP-1","CAR-95-1","ZAFIR","NAVID","CYRUS","MAR-10","M320","GM6-LYNX","STING","SDAR"]; // FACTION PRIMARY WEAPONS
-_secondaries = ["ROOK-40","ZUBR"]; // FACTION SECONDARY WEAPONS
-_launchers = ["RPG-42","TITAN-COMPACT","TITAN","9M135-VORONA"]; // FACTION LAUNCHER WEAPONS
-_primaries = ["KATIBA","KATIBA-CARBINE","CAR-95","CMR-76","RAHIM","ASP-1","CAR-95-1","ZAFIR","NAVID","CYRUS","MAR-10","M320","GM6-LYNX","STING","SDAR"]; // FACTION PRIMARY WEAPONS
-_secondaries = ["ROOK-40","ZUBR"]; // FACTION SECONDARY WEAPONS
-_launchers = ["RPG-42","TITAN-COMPACT","TITAN","9M135-VORONA"]; // FACTION LAUNCHER WEAPONS
+_primaries = ["KATIBA","KATIBAC","CAR95","CMR76","RAHIM","ASP1","CAR951","ZAFIR","NAVID","CYRUS","MAR10","M320","GM6LYNX","STING","SDAR"]; // FACTION PRIMARY WEAPONS
+_secondaries = ["ROOK","ZUBR"]; // FACTION SECONDARY WEAPONS
+_launchers = ["RPG42","TITANC","TITAN","9M135"]; // FACTION LAUNCHER WEAPONS
 _roles = [ // ROLE, TRAITS, VOICE, FACE, UNIFORM, HEADGEAR, BACKPACK, VEST, NVG, FACEWEAR, BINOCULAR, TERMINAL, PRIMARY, SECONDARY, LAUNCHER, MEDICAL, CHEMLIGHTS, SMOKES, GRENADES, EXPLOSIVES, MINES, COMPASS, MAP, WATCH, RADIO, TOOLS
 	["co",		-1,			selectRandom _voices,	selectRandom _faces,	4,	10,	-1,	-1,	0,	-1,	0,	0,	0,	1,	-1,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],
 	["sl",		-1,			selectRandom _voices,	selectRandom _faces,	0,	9,	-1,	-1,	0,	-1,	0,	0,	0,	1,	-1,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],
