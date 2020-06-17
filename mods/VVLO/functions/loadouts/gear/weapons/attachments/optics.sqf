@@ -22,7 +22,7 @@ _optics = [
 	"optic_ERCO_khk_F", // 20 Khaki
 	"optic_ERCO_snd_F", // 21 Sand
 	"optic_Hamr_khk_F", // 22 Khaki
-	"optic_Hamr", // 23
+	"optic_Hamr", // 23 Black
 	"optic_Holosight_arid_F", // 24 Arid
 	"optic_Holosight_blk_F", // 25 Black
 	"optic_Holosight_khk_F", // 26 Khaki
