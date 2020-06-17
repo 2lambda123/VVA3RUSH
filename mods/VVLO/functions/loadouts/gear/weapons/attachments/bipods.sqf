@@ -1,14 +1,14 @@
-_bipods = [ // CLASSNAME, TITLE
-	["bipod_01_F_blk","Bipod (Black) [NATO]"], // 1
-	["bipod_01_F_khk","Bipod (Khaki) [NATO]"], // 2
-	["bipod_01_F_mtp","Bipod (MTP) [NATO]"], // 3
-	["bipod_01_F_snd","Bipod (Sand) [NATO]"], // 4
-	["bipod_02_F_blk","Bipod (Black) [CSAT]"], // 5
-	["bipod_02_F_hex","Bipod (Hex) [CSAT]"], // 6
-	["bipod_02_F_tan","Bipod (Tan) [CSAT]"], // 7
-	["bipod_02_F_arid","Bipod (Arid) [Spetsnaz]"], // 8
-	["bipod_02_F_lush","Bipod (Lush) [Spetsnaz]"], // 9
-	["bipod_03_F_blk","Bipod (Black) [AAF]"], // 10
-	["bipod_03_F_oli","Bipod (Olive) [AAF]"] // 11
+_bipods = [
+	"bipod_01_F_blk", // 0 Black NATO
+	"bipod_01_F_khk", // 1 Khaki NATO
+	"bipod_01_F_mtp", // 2 MTP NATO
+	"bipod_01_F_snd", // 3 Sand NATO
+	"bipod_02_F_blk", // 4 Black CSAT
+	"bipod_02_F_hex", // 5 Hex CSAT
+	"bipod_02_F_tan", // 6 Tan CSAT
+	"bipod_02_F_arid", // 7 Arid
+	"bipod_02_F_lush", // 8 Lush
+	"bipod_03_F_blk", // 9 Black AAF
+	"bipod_03_F_oli" // 10 Olive AAF
 ];
 _bipods;

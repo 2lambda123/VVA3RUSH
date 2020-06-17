@@ -1,4 +1,4 @@
-_maps = [ // CLASSNAME, TITLE
-	["ItemMap","Map"] // 1
+_maps = [
+	"ItemMap" // 0
 ];
 _maps;

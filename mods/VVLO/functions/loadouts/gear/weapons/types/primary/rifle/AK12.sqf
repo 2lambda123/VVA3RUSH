@@ -1,7 +1,7 @@
 _key = "AK12"; // https://armedassault.fandom.com/wiki/AK-12_series/AK-12_7.62_mm
 _year = 2018; // https://en.wikipedia.org/wiki/AK-12
 _sides = [EAST,WEST,INDEPENDENT];
-_content = ["Vanilla","Apex"];
+_content = ["Vanilla","Apex","Contact"];
 _type = "Assault Rifle";
 _factions = ["FIA","SPETSNAZ"];
 _variants = [

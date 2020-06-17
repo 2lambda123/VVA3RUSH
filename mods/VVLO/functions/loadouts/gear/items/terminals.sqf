@@ -1,9 +1,9 @@
-_terminals = [ // CLASSNAME, TITLE
-	["ItemGPS","GPS"], // 1
-	["B_UavTerminal","UAV Terminal [NATO]"], // 2
-	["O_UavTerminal","UAV Terminal [CSAT]"], // 3
-	["I_UavTerminal","UAV Terminal [AAF]"], // 4
-	["C_UavTerminal","UAV Terminal [Civilians]"], // 5
-	["I_E_UavTerminal","UAV Terminal [LDF]"] // 6
+_terminals = [
+	"ItemGPS", // 0
+	"B_UavTerminal", // 1 NATO
+	"O_UavTerminal", // 2 CSAT
+	"I_UavTerminal", // 3 AAF
+	"C_UavTerminal", // 4 Civilian
+	"I_E_UavTerminal" // 5 LDF
 ];
 _terminals;

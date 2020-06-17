@@ -1,7 +1,7 @@
-_chemlights = [ // CLASSNAME, TITLE
-	["Chemlight_blue","Chemlight (Blue)"], // 1
-	["Chemlight_green","Chemlight (Green)"], // 2
-	["Chemlight_red","Chemlight (Red)"], // 3
-	["Chemlight_yellow","Chemlight (Yellow)"] // 4
+_chemlights = [
+	"Chemlight_blue", // 0
+	"Chemlight_green", // 1
+	"Chemlight_red", // 2
+	"Chemlight_yellow" // 3
 ];
 _chemlights;
