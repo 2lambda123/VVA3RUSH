@@ -1,14 +1,15 @@
-_key = "RPG7";
-_name = "RPG-7";
+_key = "RPG7"; // https://armedassault.fandom.com/wiki/RPG-7V
 _year = 1961; // https://en.wikipedia.org/wiki/RPG-7
-_side = EAST;
+_side = [WEST,EAST,INDEPENDENT];
+_content = ["Apex"];
 _type = "Rocket Launcher";
-_factions = ["CSAT"];
+_factions = ["CSAT","FIA","SYNDIKAT","GENDARMERIE"];
+_camo = [];
 _variants = [
-	["launch_RPG7_F","RPG-7"] // 1
+	"launch_RPG7_F" // 0
 ];
 _magazines = [
-	["RPG7_F","PG-7VM HEAT Grenade"] // 1
+	"RPG7_F" // 0
 ];
 _tracers = [];
 _grenades = [];
