@@ -5,10 +5,7 @@ _content = ["Vanilla"];
 _type = "Submachine Gun";
 _factions = ["AAF"];
 _variants = [
-	"hgun_PDW2000_F", // 0
-	"hgun_PDW2000_snds_F", // 1
-	"hgun_PDW2000_Holo_F", // 2
-	"hgun_PDW2000_Holo_snds_F" // 3
+	"hgun_PDW2000_F" // 0
 ];
 _magazines = [
 	"30Rnd_9x21_Mag" // 0
