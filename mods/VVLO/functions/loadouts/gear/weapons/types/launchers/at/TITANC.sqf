@@ -4,13 +4,14 @@ _sides = [EAST,WEST,INDEPENDENT];
 _content = ["Vanilla","Apex"];
 _type = "Rocket Launcher";
 _factions = ["CSAT","NATO","AAF","LDF"];
+_camo = ["Sand","Tropic","Olive","Coyote","Green Hex"];
 _variants = [
-	"launch_Titan_short_F", // 0
-	"launch_O_Titan_short_F", // 1 Coyote
-	"launch_O_Titan_short_ghex_F", // 2 Green Hex
-	"launch_I_Titan_short_F", // 3 Olive
-	"launch_B_Titan_short_F", // 4 Sand
-	"launch_B_Titan_short_tna_F" // 5 Tropic
+	"launch_B_Titan_short_F", // 0 Sand
+	"launch_B_Titan_short_tna_F", // 1 Tropic
+	"launch_I_Titan_short_F", // 2 Olive
+	"launch_O_Titan_short_F", // 3 Coyote
+	"launch_O_Titan_short_ghex_F", // 4 Green Hex
+	"launch_Titan_short_F" // 5
 ];
 _magazines = [
 	"Titan_AT", // 0

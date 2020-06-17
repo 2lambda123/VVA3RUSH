@@ -4,15 +4,16 @@ _sides = [EAST,WEST,INDEPENDENT];
 _content = ["Vanilla","Apex","Contact"];
 _type = "SAM Missile Launcher";
 _factions = ["CSAT","NATO","AAF","LDF"];
+_camo = ["Sand","Olive","Tropic","Geometric","Digital","Hex","Green Hex"];
 _variants = [
-	"launch_Titan_F", // 0
-	"launch_I_Titan_F", // 1 Digital
-	"launch_I_Titan_eaf_F", // 2 Geometric
-	"launch_O_Titan_ghex_F", // 3 Green Hex
-	"launch_O_Titan_F", // 4 Hex
-	"launch_B_Titan_olive_F", // 5 Olive
-	"launch_B_Titan_F", // 6 Sand
-	"launch_B_Titan_tna_F" // 7 Tropic
+	"launch_B_Titan_F", // 0 Sand
+	"launch_B_Titan_olive_F", // 1 Olive
+	"launch_B_Titan_tna_F", // 2 Tropic
+	"launch_I_Titan_eaf_F", // 3 Geometric
+	"launch_I_Titan_F", // 4 Digital
+	"launch_O_Titan_F", // 5 Hex
+	"launch_O_Titan_ghex_F", // 6 Green Hex
+	"launch_Titan_F" // 7
 ];
 _magazines = [
 	"Titan_AA", // 0
