@@ -1,18 +1,18 @@
-_key = "RPG42";
-_name = "RPG-42 Alamut";
+_key = "RPG42"; // https://armedassault.fandom.com/wiki/RPG-42
 _year = 2012; // https://en.wikipedia.org/wiki/RPG-32
-_side = EAST;
+_side = [WEST,EAST,INDEPENDENT];
 _type = "Rocket Launcher";
-_factions = ["CSAT"];
+_factions = ["CSAT","AAF","FIA","SYNDIKAT","VIPER","SPETSNAZ"];
+_camo = ["Camo","Green","Hex","Green Hex"];
 _variants = [
-	["launch_RPG32_camo_F","RPG-42 (Camo)"], // 1
-	["launch_RPG32_green_F","RPG-42 (Green)"], // 2
-	["launch_RPG32_F","RPG-42 Alamut"], // 3
-	["launch_RPG32_ghex_F","RPG-42 Alamut (Green Hex)"] // 4
+	"launch_RPG32_camo_F", // 0 Camo
+	"launch_RPG32_green_F", // 1 Green
+	"launch_RPG32_F", // 2 Hex
+	"launch_RPG32_ghex_F" // 3 Green Hex
 ];
 _magazines = [
-	["RPG32_F","RPG-42 Rocket"], // 1
-	["RPG32_HE_F","RPG-42 HE Rocket"] // 2
+	"RPG32_F", // 0
+	"RPG32_HE_F" // 1
 ];
 _tracers = [];
 _grenades = [];
