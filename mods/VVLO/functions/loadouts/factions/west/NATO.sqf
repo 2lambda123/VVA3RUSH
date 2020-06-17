@@ -254,9 +254,9 @@ _vests = [
 	"V_TacVestCamo_khk", // 37
 	"V_TacVestIR_blk" // 38
 ]; // FACTION VESTS
-_primaries = []; // FACTION PRIMARY WEAPONS
-_secondaries = []; // FACTION SECONDARY WEAPONS
-_launchers = []; // FACTION LAUNCHER WEAPONS
+_primaries = ["M320","MAR10","MK1","MX","MXM","MXSW","SDAR","SPAR17","SPMG","VERMIN"]; // FACTION PRIMARY WEAPONS
+_secondaries = ["4FIVE","PO7"]; // FACTION SECONDARY WEAPONS
+_launchers = ["MAAWS","PCML","TITAN","TITANC"]; // FACTION LAUNCHER WEAPONS
 _roles = [ // ROLE, TRAITS, VOICE, FACE, UNIFORM, HEADGEAR, BACKPACK, VEST, NVG, FACEWEAR, BINOCULAR, TERMINAL, PRIMARY, SECONDARY, LAUNCHER, MEDICAL, CHEMLIGHTS, SMOKES, GRENADES, EXPLOSIVES, MINES, COMPASS, MAP, WATCH, RADIO, TOOLS
 	["co",		-1,			selectRandom _voices,	selectRandom _faces,	4,	10,	-1,	-1,	0,	-1,	0,	0,	0,	1,	-1,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],
 	["sl",		-1,			selectRandom _voices,	selectRandom _faces,	0,	9,	-1,	-1,	0,	-1,	0,	0,	0,	1,	-1,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],
