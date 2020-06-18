@@ -257,8 +257,7 @@ _vests = [
 _primaries = ["VERMIN","MX","SPAR16","MXSW","SPAR16S","SPMG","M320","MAR10","MK1","MK14","MXM","SPAR17","SDAR"]; // FACTION PRIMARY WEAPONS
 _secondaries = ["PO7","4FIVE"]; // FACTION SECONDARY WEAPONS
 _launchers = ["TITAN","MAAWS","PCML","TITANC"]; // FACTION LAUNCHER WEAPONS
-_roles = [ 
-//ROLE    TRAITS     VOICE				   FACE					UNIFORM, HEADGEAR, BACKPACK, VEST, NVG, FACEWEAR, BINOCULAR, TERMINAL, PRIMARY, SECONDARY, LAUNCHER, MEDICAL, CHEMLIGHTS, SMOKES, GRENADES, EXPLOSIVES, MINES, COMPASS, MAP, WATCH, RADIO, TOOLS
+_roles = [ // ROLE TRAITS VOICE FACE UNIFORM HEADGEAR BACKPACK VEST NVG FACEWEAR BINOCULAR TERMINAL PRIMARY SECONDARY LAUNCHER MEDICAL CHEMLIGHTS SMOKES GRENADES EXPLOSIVES MINES COMPASS MAP WATCH RADIO TOOLS
 ["co",    -1,		 selectRandom _voices, selectRandom _faces,	4,	10,	-1,	-1,	0,	-1,	0,	0,	0,	1,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
 ["sl",    -1,		 selectRandom _voices, selectRandom _faces,	0,	9,	-1,	-1,	0,	-1,	0,	0,	0,	1,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
 ["ftl",   -1,		 selectRandom _voices, selectRandom _faces,	0,	0,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
@@ -295,8 +294,7 @@ _roles = [
 ["vg",    -1,		 selectRandom _voices, selectRandom _faces,	0,	0,	-1,	-1,	0,	-1,	0,	0,	6,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
 ["p",     -1,		 selectRandom _voices, selectRandom _faces,	12,	10,	-1,	-1,	0,	-1,	0,	0,	6,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
 ["car",   -1,		 selectRandom _voices, selectRandom _faces,	0,	0,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,6]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["smg",   -1,		 selectRandom _voices, selectRandom _faces,	0,	0,	-1,	-1,	0,	-1,	0,	0,	6,	0,	-1,	[[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]]
-];  // FACTION ROLES
+["smg",   -1,		 selectRandom _voices, selectRandom _faces,	0,	0,	-1,	-1,	0,	-1,	0,	0,	6,	0,	-1,	[[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]]]; // FACTION ROLES
 _role = 0; _result = _roles select _role; // SELECT FACTION ROLE
 { /* Expand SCALAR to STRINGS. */ } forEach _result;
 _result;
