@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1801.6578,7.7081575,6043.9146};
-		dir[]={-0.22911049,-0.48985767,0.84130692};
-		up[]={-0.12874299,0.8716014,0.47274816};
-		aside[]={0.96492994,-1.3133249e-006,0.26280114};
+		pos[]={1807.0682,14.07175,6049.1743};
+		dir[]={0.36747164,-0.53651673,0.75984424};
+		up[]={0.23362263,0.8436839,0.48308033};
+		aside[]={0.90033066,-3.0263327e-006,-0.43538484};
 	};
 };
 binarizationWanted=0;
@@ -34,14 +34,13 @@ addons[]=
 	"A3_Structures_F_Walls",
 	"A3_Structures_F_Mil_Flags",
 	"A3_Weapons_F_Ammoboxes",
-	"ace_logistics_wirecutter",
 	"A3_Signs_F_Signs_Ad"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=7;
+		items=6;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -78,13 +77,6 @@ class AddonsMetaData
 			url="https://www.arma3.com";
 		};
 		class Item5
-		{
-			className="ace_logistics_wirecutter";
-			name="ACE3 - Logistics Wire Cutter";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item6
 		{
 			className="A3_Signs_F";
 			name="Arma 3 - Signs";
@@ -713,7 +705,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="[_this, _value] call CBA_fnc_setCallsign";
+					expression="_this setGroupID [_value];";
 					class Value
 					{
 						class data
@@ -1240,7 +1232,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="[_this, _value] call CBA_fnc_setCallsign";
+					expression="_this setGroupID [_value];";
 					class Value
 					{
 						class data
@@ -1767,7 +1759,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="[_this, _value] call CBA_fnc_setCallsign";
+					expression="_this setGroupID [_value];";
 					class Value
 					{
 						class data
@@ -2294,7 +2286,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="[_this, _value] call CBA_fnc_setCallsign";
+					expression="_this setGroupID [_value];";
 					class Value
 					{
 						class data
@@ -2820,7 +2812,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="[_this, _value] call CBA_fnc_setCallsign";
+					expression="_this setGroupID [_value];";
 					class Value
 					{
 						class data
@@ -3346,7 +3338,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="[_this, _value] call CBA_fnc_setCallsign";
+					expression="_this setGroupID [_value];";
 					class Value
 					{
 						class data
@@ -3873,7 +3865,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="[_this, _value] call CBA_fnc_setCallsign";
+					expression="_this setGroupID [_value];";
 					class Value
 					{
 						class data
@@ -4392,7 +4384,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="[_this, _value] call CBA_fnc_setCallsign";
+					expression="_this setGroupID [_value];";
 					class Value
 					{
 						class data
@@ -5031,6 +5023,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="if (hasInterface) then {null = [this,""WEST""] execVM ""scripts\organized_arsenal.sqf"";};";
 				name="WAMMO";
 			};
 			id=3611;

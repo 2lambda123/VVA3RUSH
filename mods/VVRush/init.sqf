@@ -27,8 +27,9 @@ if (modVVRushSwitch == 1) then {
     VVR_ROUNDSTART = false; // Round Started Switch
     VVR_ROUNDSTARTT = 0; // Round Start Time Counter
     // TODO: SCRIPT INITIAL SPAWN LOCATION ASSETS
-    [EAMMO,["Arsenal",{["Open",true] call BIS_fnc_arsenal;}]] remoteExec ["addAction",0,true]; // Add east arsenal.
-    [WAMMO,["Arsenal",{["Open",true] call BIS_fnc_arsenal;}]] remoteExec ["addAction",0,true]; // Add west arsenal.
+    ["Preload"] call BIS_fnc_arsenal;
+    //[EAMMO,["Arsenal",{["Open",true] call BIS_fnc_arsenal;}]] remoteExec ["addAction",0,true]; // Add east arsenal.
+    //[WAMMO,["Arsenal",{["Open",true] call BIS_fnc_arsenal;}]] remoteExec ["addAction",0,true]; // Add west arsenal.
     [EFLAG,["START",{VVR_EREADY = true; hintSilent 'EAST READY!';}]] remoteExec ["addAction",0,true]; // Add east start action.
     [EFLAG,["END",{hintSilent 'EAST CONCEDED!'; ["end1",true] remoteExecCall ['BIS_fnc_endMission',0];}]] remoteExec ["addAction",0,true]; // Add east concede action.
     [WFLAG,["START",{VVR_WREADY = true; hintSilent 'WEST READY!';}]] remoteExec ["addAction",0,true]; // Add west start action.
