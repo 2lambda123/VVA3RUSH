@@ -1,4 +1,4 @@
-_key = "RAHIM"; // https://armedassault.fandom.com/wiki/Protector
+_key = "RAHIM"; // https://armedassault.fandom.com/wiki/Rahim
 _year = 2011; // https://firearmcentral.fandom.com/wiki/VS-121
 _sides = [EAST];
 _content = ["Vanilla","Marks"];
