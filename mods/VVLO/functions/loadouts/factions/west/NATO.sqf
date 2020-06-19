@@ -8,46 +8,47 @@ _camo = ["MTP","Tropic","Woodland"];
 _traits = [[0,0,1,0],[1,0,0,0],[0,1,0,0],[1,1,0,0],[0,0,0,1]]; // [ENG,EXP,MED,UAV] 0 = OFF, 1 = ON. [MED,ENG,ENGM,EOD,UAV]
 _rolekeys = ["co","sl","ftl","med","eng","engm","eod","uav","r","rat","gre","ar","aar","mmg","mmga","hmg","hmga","mat","mata","hat","hata","mrt","mrta","msam","msama","hsam","hsama","dm","sn","sp","div","car","smg","vc","vg","vd","p"]; // FACTION ROLE KEYS
 _roles = [ // ROLE TRAITS VOICE FACE UNIFORM HEADGEAR BACKPACK VEST NVG FACEWEAR BINOCULAR TERMINAL PRIMARY SECONDARY LAUNCHER MEDICAL CHEMLIGHTS SMOKES GRENADES EXPLOSIVES MINES COMPASS MAP WATCH RADIO TOOLS
-["co",    -1, floor random 12, floor random 20,	3,	0,	-1,	-1,	0,	-1,	0,	0,	0,	1,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["sl",    -1, floor random 12, floor random 20,	3,	1,	-1,	-1,	0,	-1,	0,	0,	0,	1,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["ftl",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["med",   0,  floor random 12, floor random 20,	0,	3,	6,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["eng",   1,  floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["engm",  2,  floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["eod",   3,  floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["uav",   4,  floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["r",     -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["rat",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	0,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["ar",    -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["aar",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["mat",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["mata",  -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["hat",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["hata",  -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["mmg",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	2,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["mmga",  -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["hmg",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	3,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["hmga",  -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["msam",  -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	2,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["msama", -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["hsam",  -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	2,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["hsama", -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["mrt",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["mrta",  -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["gre",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["dm",    -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	1,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["sn",    -1, floor random 12, floor random 20,	6,	6,	-1,	-1,	0,	-1,	0,	0,	5,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["sp",    -1, floor random 12, floor random 20,	9,	3,	-1,	-1,	0,	-1,	0,	0,	4,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["div",   -1, floor random 12, floor random 20,	17,	-1,	-1,	16,	4,	-1,	0,	0,	7,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["vc",    -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	6,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["vd",    -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	6,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["vg",    -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	6,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["p",     -1, floor random 12, floor random 20,	16,	27,	-1,	-1,	0,	-1,	0,	0,	6,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["car",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,6]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["smg",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	6,	0,	-1,	[[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]]]; // FACTION ROLES
+	["co",    -1, floor random 12, floor random 20,	3,	0,	-1,	-1,	0,	-1,	0,	0,	0,	1,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["sl",    -1, floor random 12, floor random 20,	3,	1,	-1,	-1,	0,	-1,	0,	0,	0,	1,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["ftl",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["med",   0,  floor random 12, floor random 20,	0,	3,	6,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["eng",   1,  floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["engm",  2,  floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["eod",   3,  floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["uav",   4,  floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["r",     -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["rat",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	0,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["ar",    -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["aar",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["mat",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["mata",  -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["hat",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["hata",  -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["mmg",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	2,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["mmga",  -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["hmg",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	3,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["hmga",  -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["msam",  -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	2,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["msama", -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["hsam",  -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	2,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["hsama", -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["mrt",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["mrta",  -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["gre",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["dm",    -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	1,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["sn",    -1, floor random 12, floor random 20,	6,	6,	-1,	-1,	0,	-1,	0,	0,	5,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["sp",    -1, floor random 12, floor random 20,	9,	3,	-1,	-1,	0,	-1,	0,	0,	4,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["div",   -1, floor random 12, floor random 20,	17,	-1,	-1,	16,	4,	-1,	0,	0,	7,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["vc",    -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	6,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["vd",    -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	6,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["vg",    -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	6,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["p",     -1, floor random 12, floor random 20,	16,	27,	-1,	-1,	0,	-1,	0,	0,	6,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["car",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,6]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+	["smg",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	6,	0,	-1,	[[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]]
+]; // FACTION ROLES
 _rolekeys = [];
 {_rolekeys set [count _rolekeys, _x select 0]} forEach _roles;
-_primaries = ["VERMIN","MX","SPAR16","MXSW","SPAR16S","SPMG","M320","MAR10","MK1","MK14","MXM","SPAR17","SDAR"]; // FACTION PRIMARY WEAPONS
+_primaries = ["VERMIN","MX","SPAR16","MXSW","SPAR16S","SPMG","MXM","SPAR17","MK1","MK14","M320","MAR10","SDAR"]; // FACTION PRIMARY WEAPONS
 _secondaries = ["PO7","4FIVE"]; // FACTION SECONDARY WEAPONS
 _launchers = ["TITAN","MAAWS","PCML","TITANC"]; // FACTION LAUNCHER WEAPONS
 _voices = [
@@ -148,113 +149,45 @@ _headgear = [
 	"H_Cap_tan_specops_US"			// 35 Cap MTP
 ]; // FACTION HEADGEAR
 _backpacks = [
-	"B_AssaultPack_khk", // 0 Khaki
-	"B_AssaultPack_rgr", // 1 Green
-	"B_AssaultPack_sgg", // 2 Sage
-	"B_AssaultPack_blk", // 3 Black
-	"B_AssaultPack_cbr", // 4 Coyote
-	"B_AssaultPack_mcamo", // 5 MTP
-	"B_AssaultPack_tna_F", // 6 Tropic
-	"B_AssaultPack_wdl_F", // 7 Woodland
-	"B_Kitbag_rgr", // 8 Green
-	"B_Kitbag_mcamo", // 9 MTP
-	"B_Kitbag_sgg", // 10 Sage
-	"B_Kitbag_cbr", // 11 Coyote
-	"B_Kitbag_tan", // 12 Tan
-	"B_TacticalPack_rgr", // 13 Green
-	"B_TacticalPack_mcamo", // 14 MTP
-	"B_TacticalPack_blk", // 15 Black
-	"B_TacticalPack_oli", // 16 Olive
-	"B_FieldPack_khk", // 17 Khaki
-	"B_FieldPack_oli", // 18 Olive
-	"B_FieldPack_cbr", // 19 Coyote
-	"B_FieldPack_blk", // 20 Black
-	"B_FieldPack_green_F", // 21 Green
-	"B_FieldPack_taiga_F", // 22 Taiga
-	"B_Carryall_oli", // 23 Olive
-	"B_Carryall_mcamo", // 24 MTP
-	"B_Carryall_khk", // 25 Khaki
-	"B_Carryall_cbr", // 26 Coyote
-	"B_Carryall_green_F", // 27 Green
-	"B_Carryall_taiga_F", // 28 Taiga
-	"B_Carryall_wdl_F", // 29 Woodland
-	"B_Bergen_sgg", // 30 Sage
-	"B_Bergen_mcamo", // 31 MTP
-	"B_Bergen_rgr", // 32 Green
-	"B_Bergen_blk", // 33 Black
-	"B_Bergen_mcamo_F", // 34 MTP
-	"B_Bergen_tna_F", // 35 Tropic
-	"B_B_Parachute_02_F", // 36
-	"B_HMG_01_support_F", // 37
-	"B_HMG_01_support_grn_F", // 38 Green
-	"B_HMG_01_support_high_F", // 39 Green
-	"B_HMG_01_weapon_F", // 40 Green
-	"B_HMG_01_Weapon_grn_F", // 41 Green
-	"B_HMG_01_A_weapon_F", // 42 Green
-	"B_GMG_01_weapon_F", // 43 Green
-	"B_GMG_01_Weapon_grn_F", // 44 Green
-	"B_GMG_01_A_weapon_F", // 45 Green
-	"B_HMG_01_high_weapon_F", // 46 Green
-	"B_GMG_01_high_weapon_F", // 47 Green
-	"B_Mortar_01_support_F", // 48 Green
-	"B_Mortar_01_support_grn_F", // 49 Green
-	"B_Mortar_01_weapon_F", // 50 Green
-	"B_Mortar_01_Weapon_grn_F", // 51 Green
-	"B_AA_01_weapon_F", // 52 Green
-	"B_AT_01_weapon_F", // 53 Green
-	"B_UAV_01_backpack_F", // 54 Green
-	"B_UAV_06_backpack_F", // 55 Green
-	"B_ViperHarness_blk_F", // 56 Black
-	"B_ViperHarness_khk_F", // 57 Khaki
-	"B_ViperHarness_oli_F", // 58 Olive
-	"B_ViperLightHarness_blk_F", // 59 Black
-	"B_ViperLightHarness_khk_F", // 60 Khaki
-	"B_ViperLightHarness_oli_F", // 61 Olive
-	"B_RadioBag_01_wdl_F", // 62 Woodland
-	"B_RadioBag_01_mtp_F", // 63 MTP
-	"B_RadioBag_01_tropic_F", // 64 Tropic
-	"B_RadioBag_01_black_F" // 65 Black
+	"B_AssaultPack_mcamo",		// 0 Assault Pack MTP
+	"B_AssaultPack_tna_F",		// 1 Assault Pack Tropic
+	"B_AssaultPack_wdl_F",		// 2 Assault Pack Woodland
+	"B_Kitbag_mcamo",			// 3 Kitbag MTP
+	"B_Kitbag_rgr",				// 4 Kitbag Green
+	"B_TacticalPack_mcamo",		// 5 Tactical Pack MTP
+	"B_TacticalPack_rgr",		// 6 Tactical Pack Green
+	"B_Carryall_mcamo",			// 7 Carryall MTP
+	"B_Carryall_oli",			// 8 Carryall Olive
+	"B_HMG_01_support_F",		// 9 Tripod
+	"B_HMG_01_support_high_F",	// 10 Tripod Raised
+	"B_HMG_01_weapon_F",		// 11 HMG
+	"B_HMG_01_high_weapon_F",	// 12 HMG Raised
+	"B_HMG_01_A_weapon_F",		// 13 HMG Auto
+	"B_GMG_01_weapon_F",		// 14 GMG
+	"B_GMG_01_high_weapon_F",	// 15 GMG Raised
+	"B_GMG_01_A_weapon_F",		// 16 GMG Auto
+	"B_Mortar_01_weapon_F",		// 17 Tube
+	"B_Mortar_01_support_F",	// 18 Bipod
+	"B_AA_01_weapon_F",			// 19 AA
+	"B_AT_01_weapon_F",			// 20 AT
+	"B_UAV_01_backpack_F",		// 21 UAV AR2
+	"B_UAV_06_backpack_F",		// 22 UAV AL6
+	"B_B_Parachute_02_F"		// 23
 ]; // FACTION BACKPACKS
 _vests = [
-	"V_BandollierB_blk", // 0 Black
-	"V_BandollierB_cbr", // 1 Coyote
-	"V_BandollierB_khk", // 2 Khaki
-	"V_BandollierB_oli", // 3 Olive
-	"V_BandollierB_rgr", // 4 Green
-	"V_Chestrig_blk", // 5 Black
-	"V_Chestrig_khk", // 6 Khaki
-	"V_Chestrig_oli", // 7 Olive
-	"V_Chestrig_rgr", // 8 Green
-	"V_PlateCarrier1_blk", // 9 Black
-	"V_PlateCarrier1_rgr", // 10 Green
-	"V_PlateCarrier1_rgr_noflag_F", // 11 Green
-	"V_PlateCarrier1_tna_F", // 12 Tropic
-	"V_PlateCarrier1_wdl", // 13 Woodland
-	"V_PlateCarrier2_blk", // 14 Black
-	"V_PlateCarrier2_rgr", // 15 Green
-	"V_PlateCarrier2_rgr_noflag_F", // 16 Green
-	"V_PlateCarrier2_tna_F", // 17 Tropic
-	"V_PlateCarrier2_wdl", // 18 Woodland
-	"V_PlateCarrier3_rgr", // 19 Green
-	"V_PlateCarrierGL_blk", // 20 Black
-	"V_PlateCarrierGL_mtp", // 21 MTP
-	"V_PlateCarrierGL_rgr", // 22 Green
-	"V_PlateCarrierGL_tna_F", // 23 Tropic
-	"V_PlateCarrierGL_wdl", // 24 Woodland
-	"V_PlateCarrierSpec_blk", // 25 Black
-	"V_PlateCarrierSpec_mtp", // 26 MTP
-	"V_PlateCarrierSpec_rgr", // 27 Green
-	"V_PlateCarrierSpec_tna_F", // 28 Tropic
-	"V_PlateCarrierSpec_wdl", // 29 Woodland
-	"V_Rangemaster_belt", // 30
-	"V_RebreatherB", // 31
-	"V_TacVest_blk", // 32 Black
-	"V_TacVest_brn", // 33 Brown
-	"V_TacVest_camo", // 34 Camo
-	"V_TacVest_khk", // 35 Khaki
-	"V_TacVest_oli", // 36 Olive
-	"V_TacVestCamo_khk", // 37
-	"V_TacVestIR_blk" // 38
+	"V_PlateCarrier1_rgr",		// 0 Lite MTP
+	"V_PlateCarrier1_tna_F",	// 1 Lite Tropic
+	"V_PlateCarrier1_wdl",		// 2 Lite Woodland
+	"V_PlateCarrier2_rgr",		// 3 Rig MTP
+	"V_PlateCarrier2_tna_F",	// 4 Rig Tropic
+	"V_PlateCarrier2_wdl",		// 5 Rig Woodland
+	"V_PlateCarrierSpec_mtp",	// 6 Special MTP
+	"V_PlateCarrierSpec_tna_F",	// 7 Special Tropic
+	"V_PlateCarrierSpec_wdl",	// 8 Special Woodland
+	"V_PlateCarrierGL_mtp",		// 9 GL MTP
+	"V_PlateCarrierGL_tna_F",	// 10 Gl Tropic
+	"V_PlateCarrierGL_wdl",		// 11 GL Woodland
+	"V_RebreatherB"				// 12
 ]; // FACTION VESTS
 _role = 0; _result = _roles select _role; // SELECT FACTION ROLE
 { /* Expand SCALAR to STRINGS. */ } forEach _result;
