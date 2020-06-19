@@ -13,7 +13,7 @@ class VVM {
     file = "mods\VVM\functions\briefing";
   };
   class compositions {
-    file = "mods\VVM\functions\ai";
+    file = "mods\VVM\functions\compositions";
     class createFlagpole {};
     class createGarage {};
     class createVVS {};

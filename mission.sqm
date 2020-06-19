@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=4412;
+		nextID=4460;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1807.0682,14.07175,6049.1743};
-		dir[]={0.36747164,-0.53651673,0.75984424};
-		up[]={0.23362263,0.8436839,0.48308033};
-		aside[]={0.90033066,-3.0263327e-006,-0.43538484};
+		pos[]={1819.2421,35.500225,6030.8799};
+		dir[]={-0.54753083,-0.77926421,0.30531436};
+		up[]={-0.68058252,0.62653041,0.37950361};
+		aside[]={0.48703623,-1.268529e-005,0.87346917};
 	};
 };
 binarizationWanted=0;
@@ -5064,6 +5064,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="if (hasInterface) then {null = [this,""EAST""] execVM ""scripts\organized_arsenal.sqf"";};";
 				name="EAMMO";
 			};
 			id=3612;

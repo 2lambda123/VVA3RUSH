@@ -2,7 +2,7 @@
 class VVLO {
 	tag = "VVLO";
   class create {
-    file = "mods\VVLO\functions";
+    file = "mods\VVLO\functions\loadouts";
     class addBackpack {};
     class clearGear {};
     class createLoadout {};

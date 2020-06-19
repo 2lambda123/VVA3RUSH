@@ -8,43 +8,43 @@ _camo = ["MTP","Tropic","Woodland"];
 _traits = [[0,0,1,0],[1,0,0,0],[0,1,0,0],[1,1,0,0],[0,0,0,1]]; // [ENG,EXP,MED,UAV] 0 = OFF, 1 = ON. [MED,ENG,ENGM,EOD,UAV]
 _rolekeys = ["co","sl","ftl","med","eng","engm","eod","uav","r","rat","gre","ar","aar","mmg","mmga","hmg","hmga","mat","mata","hat","hata","mrt","mrta","msam","msama","hsam","hsama","dm","sn","sp","div","car","smg","vc","vg","vd","p"]; // FACTION ROLE KEYS
 _roles = [ // ROLE TRAITS VOICE FACE UNIFORM HEADGEAR BACKPACK VEST NVG FACEWEAR BINOCULAR TERMINAL PRIMARY SECONDARY LAUNCHER MEDICAL CHEMLIGHTS SMOKES GRENADES EXPLOSIVES MINES COMPASS MAP WATCH RADIO TOOLS
-["co",    -1, floor random 27, floor random 20,	3,	10,	-1,	-1,	0,	-1,	0,	0,	0,	1,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["sl",    -1, floor random 27, floor random 20,	3,	9,	-1,	-1,	0,	-1,	0,	0,	0,	1,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["ftl",   -1, floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["med",   0,  floor random 27, floor random 20,	0,	0,	6,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["eng",   1,  floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["engm",  2,  floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["eod",   3,  floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["uav",   4,  floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["r",     -1, floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["rat",   -1, floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	0,	0,	0,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["ar",    -1, floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["aar",   -1, floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["mat",   -1, floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	0,	0,	1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["mata",  -1, floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["hat",   -1, floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	0,	0,	1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["hata",  -1, floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["mmg",   -1, floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	2,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["mmga",  -1, floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["hmg",   -1, floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	3,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["hmga",  -1, floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["msam",  -1, floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	0,	0,	2,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["msama", -1, floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["hsam",  -1, floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	0,	0,	2,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["hsama", -1, floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["mrt",   -1, floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["mrta",  -1, floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["gre",   -1, floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["dm",    -1, floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	1,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["sn",    -1, floor random 27, floor random 20,	6,	0,	-1,	-1,	0,	-1,	0,	0,	5,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["sp",    -1, floor random 27, floor random 20,	10,	0,	-1,	-1,	0,	-1,	0,	0,	4,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["div",   -1, floor random 27, floor random 20,	17,	-1,	-1,	16,	4,	-1,	0,	0,	7,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["vc",    -1, floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	6,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["vd",    -1, floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	6,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["vg",    -1, floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	6,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["p",     -1, floor random 27, floor random 20,	12,	10,	-1,	-1,	0,	-1,	0,	0,	6,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["car",   -1, floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,6]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
-["smg",   -1, floor random 27, floor random 20,	0,	0,	-1,	-1,	0,	-1,	0,	0,	6,	0,	-1,	[[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]]]; // FACTION ROLES
+["co",    -1, floor random 12, floor random 20,	3,	0,	-1,	-1,	0,	-1,	0,	0,	0,	1,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["sl",    -1, floor random 12, floor random 20,	3,	1,	-1,	-1,	0,	-1,	0,	0,	0,	1,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["ftl",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["med",   0,  floor random 12, floor random 20,	0,	3,	6,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["eng",   1,  floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["engm",  2,  floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["eod",   3,  floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["uav",   4,  floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[2,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["r",     -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["rat",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	0,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["ar",    -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["aar",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["mat",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["mata",  -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["hat",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["hata",  -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["mmg",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	2,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["mmga",  -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["hmg",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	3,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["hmga",  -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["msam",  -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	2,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["msama", -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["hsam",  -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	2,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["hsama", -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["mrt",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["mrta",  -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["gre",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["dm",    -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	1,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["sn",    -1, floor random 12, floor random 20,	6,	6,	-1,	-1,	0,	-1,	0,	0,	5,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["sp",    -1, floor random 12, floor random 20,	9,	3,	-1,	-1,	0,	-1,	0,	0,	4,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["div",   -1, floor random 12, floor random 20,	17,	-1,	-1,	16,	4,	-1,	0,	0,	7,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["vc",    -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	6,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["vd",    -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	6,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["vg",    -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	6,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["p",     -1, floor random 12, floor random 20,	16,	27,	-1,	-1,	0,	-1,	0,	0,	6,	0,	-1,	[[1,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["car",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	0,	0,	-1,	[[1,6]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]],
+["smg",   -1, floor random 12, floor random 20,	0,	3,	-1,	-1,	0,	-1,	0,	0,	6,	0,	-1,	[[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]], [[0,0]]]]; // FACTION ROLES
 _rolekeys = [];
 {_rolekeys set [count _rolekeys, _x select 0]} forEach _roles;
 _primaries = ["VERMIN","MX","SPAR16","MXSW","SPAR16S","SPMG","M320","MAR10","MK1","MK14","MXM","SPAR17","SDAR"]; // FACTION PRIMARY WEAPONS
@@ -62,22 +62,7 @@ _voices = [
 	"Male09ENG", // 8
 	"Male10ENG", // 9
 	"Male11ENG", // 10
-	"Male12ENG", // 11
-	"Male01ENGB", // 12
-	"Male02ENGB", // 13
-	"Male03ENGB", // 14
-	"Male04ENGB", // 15
-	"Male05ENGB", // 16
-	"CUP_D_Male01_GB_BAF", // 17
-	"CUP_D_Male02_GB_BAF", // 18
-	"CUP_D_Male03_GB_BAF", // 19
-	"CUP_D_Male04_GB_BAF", // 20
-	"CUP_D_Male05_GB_BAF", // 21
-	"CUP_D_Male01_EN", // 22
-	"CUP_D_Male02_EN", // 23
-	"CUP_D_Male03_EN", // 24
-	"CUP_D_Male04_EN", // 25
-	"CUP_D_Male05_EN" // 26
+	"Male12ENG" // 11
 ]; // FACTION VOICES
 _faces = [
 	"WhiteHead_01", // 0
@@ -99,30 +84,7 @@ _faces = [
 	"WhiteHead_17", // 16
 	"WhiteHead_19", // 17
 	"WhiteHead_20", // 18
-	"WhiteHead_21", // 19
-	"WhiteHead_22_a", // 20 Aris Camo
-	"WhiteHead_22_l", // 21 Lush Camo
-	"WhiteHead_22_sa", // 22 Semi-Arid Camo
-	"gm_WhiteHead_01_camo_01", // 23
-	"gm_WhiteHead_02_camo_01", // 24
-	"gm_WhiteHead_03_camo_01", // 25
-	"gm_WhiteHead_04_camo_01", // 26
-	"gm_WhiteHead_05_camo_01", // 27
-	"gm_WhiteHead_06_camo_01", // 28
-	"gm_WhiteHead_07_camo_01", // 29
-	"gm_WhiteHead_08_camo_01", // 30
-	"gm_WhiteHead_09_camo_01", // 31
-	"gm_WhiteHead_10_camo_01", // 32
-	"gm_WhiteHead_11_camo_01", // 33
-	"gm_WhiteHead_12_camo_01", // 34
-	"gm_WhiteHead_13_camo_01", // 35
-	"gm_WhiteHead_14_camo_01", // 36
-	"gm_WhiteHead_15_camo_01", // 37
-	"gm_WhiteHead_16_camo_01", // 38
-	"gm_WhiteHead_17_camo_01", // 39
-	"gm_WhiteHead_19_camo_01", // 40
-	"gm_WhiteHead_20_camo_01", // 41
-	"gm_WhiteHead_21_camo_01" // 42
+	"WhiteHead_21" // 19
 ]; // FACTION FACES
 _uniforms = [
 	"U_B_CombatUniform_mcam",				// 0 Combat Fatigues MTP
@@ -148,40 +110,42 @@ _uniforms = [
 	"U_B_CBRN_Suit_01_Wdl_F"				// 20 CBRN Suit MTP Woodland
 ]; // FACTION UNIFORMS
 _headgear = [
-	"H_CrewHelmetHeli_B", // 0
-	"H_CrewHelmetHeli_O", // 1
-	"H_HelmetB", // 2
-	"H_HelmetB_black", // 3 Black
-	"H_HelmetB_camo", // 4 Camo
-	"H_HelmetB_desert", // 5 Desert
-	"H_HelmetB_Enh_tna_F", // 6 Tropic
-	"H_HelmetB_grass", // 7 Grass
-	"H_HelmetB_light", // 8
-	"H_HelmetB_light_black", // 9 Black
-	"H_HelmetB_light_desert", // 10 Desert
-	"H_HelmetB_light_grass", // 11 Grass
-	"H_HelmetB_light_sand", // 12 Sand
-	"H_HelmetB_light_snakeskin", // 13 Snakeskin
-	"H_HelmetB_Light_tna_F", // 14 Tropic
-	"H_HelmetB_light_wdl", // 15 Woodland
-	"H_HelmetB_paint", // 16 Spraypaint
-	"H_HelmetB_plain_blk", // 17 Black
-	"H_HelmetB_plain_mcamo", // 18 Camo
-	"H_HelmetB_plain_wdl", // 19 Woodland
-	"H_HelmetB_sand", // 20 Sand
-	"H_HelmetB_snakeskin", // 21 Snakeskin
-	"H_HelmetB_TI_tna_F", // 22
-	"H_HelmetB_tna_F", // 23 Tropic
-	"H_HelmetCrew_B", // 24
-	"H_HelmetSpecB", // 25
-	"H_HelmetSpecB_blk", // 26 Black
-	"H_HelmetSpecB_paint1", // 27 Grass
-	"H_HelmetSpecB_paint2", // 28 Desert
-	"H_HelmetSpecB_sand", // 29 Sand
-	"H_HelmetSpecB_snakeskin", // 30 Snakeskin
-	"H_HelmetSpecB_wdl", // 31 Woodland
-	"H_PilotHelmetFighter_B", // 32
-	"H_PilotHelmetHeli_B" // 33
+	"H_Beret_Colonel",				// 0 Beret CO
+	"H_Beret_02",					// 1 Beret SL
+	"H_HelmetB_light_desert",		// 2 Light Combat Helmet Desert
+	"H_HelmetB_Light_tna_F",		// 3 Light Combat Helmet Tropic
+	"H_HelmetB_light_wdl",			// 4 Light Combat Helmet Woodland
+	"H_HelmetB_light_black",		// 5 Light Combat Helmet Black
+	"H_HelmetB_light_grass",		// 6 Light Combat Helmet Grass
+	"H_HelmetB_light_sand",			// 7 Light Combat Helmet Sand
+	"H_HelmetB_light_snakeskin",	// 8 Light Combat Helmet Snakeskin
+	"H_HelmetB_light",				// 9 Light Combat Helmet
+	"H_HelmetB_desert",				// 10 Combat Helmet Desert
+	"H_HelmetB_tna_F",				// 11 Combat Helmet Tropic
+	"H_HelmetB_plain_wdl",			// 12 Combat Helmet Woodland
+	"H_HelmetB_black",				// 13 Combat Helmet Black
+	"H_HelmetB_grass",				// 14 Combat Helmet Grass
+	"H_HelmetB_sand",				// 15 Combat Helmet Sand
+	"H_HelmetB_snakeskin",			// 16 Combat Helmet Snakeskin
+	"H_HelmetB",					// 17 Combat Helmet 
+	"H_HelmetSpecB_paint2",			// 18 Enhanced Combat Helmet Desert
+	"H_HelmetB_Enh_tna_F",			// 19 Enhanced Combat Helmet Tropic
+	"H_HelmetSpecB_wdl",			// 20 Enhanced Combat Helmet Woodland
+	"H_HelmetSpecB_blk",			// 21 Enhanced Combat Helmet Black
+	"H_HelmetSpecB_paint1",			// 22 Enhanced Combat Helmet Grass
+	"H_HelmetSpecB_sand",			// 23 Enhanced Combat Helmet Sand
+	"H_HelmetSpecB_snakeskin",		// 24 Enhanced Combat Helmet Snakeskin
+	"H_HelmetSpecB",				// 25 Enhanced Combat Helmet 
+	"H_HelmetCrew_B",				// 26 Crew Helmet
+	"H_CrewHelmetHeli_B",			// 27 Heli Crew Helmet
+	"H_PilotHelmetHeli_B",			// 28 Heli Pilot Helmet
+	"H_PilotHelmetFighter_B",		// 29 Fighter Pilot Helmet
+	"H_MilCap_mcamo",				// 30 Military Cap MTP
+	"H_MilCap_tna_F",				// 31 Military Cap Tropic
+	"H_MilCap_wdl",					// 32 Military Cap Woodland
+	"H_Bandanna_mcamo",				// 33 Bandana MTP
+	"H_Booniehat_mcamo",			// 34 Booniehat MTP
+	"H_Cap_tan_specops_US"			// 35 Cap MTP
 ]; // FACTION HEADGEAR
 _backpacks = [
 	"B_AssaultPack_khk", // 0 Khaki
