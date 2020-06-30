@@ -1,5 +1,5 @@
-// USAGE: _result = [UNIT,UNIFORM,HEAD,FACE,GOGGLE,VEST,PACK,TRAIT,WEAPON,ITEM] call VVLO_fnc_setLoadout;
-// TODO: Name, Surname,  Rank
+// USAGE: _result = [UNIT,FACTION,ROLE] call VVLO_fnc_setLoadout;
+// TODO: Name, Surname, Rank
 _this setVariable ["BIS_enableRandomization", false]; // Disable gear randomization.
 // Set Traits
 _result = [_this,0,0,0,0] call VVLO_fnc_setTraits; // TRAITS = ["engineer","explosiveSpecialist","medic","UAVHacker"]; 1 = ON, 0 = OFF.

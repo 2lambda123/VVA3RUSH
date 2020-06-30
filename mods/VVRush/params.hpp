@@ -14,7 +14,7 @@ class modVVRushLocationSwitch {
   title    = "VVRush Module: Location Selection Type";
   values[] = {0,1,2,4};
   texts[]  = {"Random","Static","List","Single"};
-  default  = 1;
+  default  = 0;
 };
 class modVVRushRoundsSwitch {
   title    = "VVRush Module: Rounds";
@@ -34,32 +34,14 @@ class modVVRushRoundTimeSwitch {
   texts[]  = {"One Minute","Two Minutes","Three Minutes","Four Minutes","Five Minutes","Six Minutes","Seven Minutes","Eight Minutes","Nine Minutes"};
   default  = 9;
 };
-class modVVRushExtraTimeSwitch {
-  title    = "VVRush Module: Extra Time";
-  values[] = {1,2,3,4,5,6,7,8,9};
-  texts[]  = {"One Minute","Two Minutes","Three Minutes","Four Minutes","Five Minutes","Six Minutes","Seven Minutes","Eight Minutes","Nine Minutes"};
-  default  = 3;
-};
 class modVVRushDefuseTimeSwitch {
   title    = "VVRush Module: Defusal Time";
   values[] = {1,2,3,4,5,6,7,8,9};
   texts[]  = {"One Minute","Two Minutes","Three Minutes","Four Minutes","Five Minutes","Six Minutes","Seven Minutes","Eight Minutes","Nine Minutes"};
   default  = 2;
 };
-class modVVRushRespawnSwitch {
-  title    = "VVRush Module: Respawn";
-  values[] = {0,1};
-  texts[]  = {"Disabled","Enabled"};
-  default  = 0;
-};
-class modVVRushSpectateSwitch {
-  title    = "VVRush Module: Spectate";
-  values[] = {0,1};
-  texts[]  = {"Disabled","Enabled"};
-  default  = 1;
-};
 class modVVRushArsenalSwitch {
-  title    = "VVRush Module: Arsenal";
+  title    = "VVRush Module: Arsenal Restricted To Faction Side";
   values[] = {0,1};
   texts[]  = {"Disabled","Enabled"};
   default  = 1;

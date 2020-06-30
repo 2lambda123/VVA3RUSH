@@ -15,6 +15,9 @@ class CfgFunctions { // https://community.bistudio.com/wiki/Description.ext#CfgF
   #ifdef modSHK
     #include "..\mods\SHK\functions.hpp"
   #endif
+  #ifdef modVVDT
+    #include "..\mods\VVDT\functions.hpp"
+  #endif
   #ifdef modVVM
     #include "..\mods\VVM\functions.hpp"
   #endif
