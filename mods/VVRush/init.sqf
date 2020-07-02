@@ -82,8 +82,8 @@ if (modVVRushSwitch == 1) then {
               ] remoteExec ["BIS_fnc_holdActionAdd",0,true]; // Add defuse objective action.
               { if ((side _x) == East) then {_x setPos VVR_DefPos};} forEach allUnits; // Move defenders to location.
               VVR_Trg1 = [["p",VVR_DefPos],["sc","[VVR_DEFUSED,true] call BIS_fnc_areEqual"]] call VVM_fnc_createTrigger; // Add trigger for bomb defusal round end condition.
-              //VVR_Trg2 = [["p",VVR_DefPos],["rx",10000],["ry",10000],["ab",1],["at",1],["sa","{VVR_EDEAD = true;} remoteExec ['BIS_fnc_call',0]; 'EAST ELIMINATED!' remoteExec ['systemChat'];"]] call VVM_fnc_createTrigger; // Add trigger for all defenders dead round end condition.
-              //VVR_Trg3 = [["p",VVR_DefPos],["rx",10000],["ry",10000],["ab",2],["at",1],["sa","{VVR_WDEAD = true;} remoteExec ['BIS_fnc_call',0]; 'WEST ELIMINATED!' remoteExec ['systemChat'];"]] call VVM_fnc_createTrigger; // Add trigger for all attackers dead round end condition.
+              VVR_Trg2 = [["p",VVR_DefPos],["rx",10000],["ry",10000],["ab",1],["at",1],["sa","{VVR_EDEAD = true;} remoteExec ['BIS_fnc_call',0]; 'EAST ELIMINATED!' remoteExec ['systemChat'];"]] call VVM_fnc_createTrigger; // Add trigger for all defenders dead round end condition.
+              VVR_Trg3 = [["p",VVR_DefPos],["rx",10000],["ry",10000],["ab",2],["at",1],["sa","{VVR_WDEAD = true;} remoteExec ['BIS_fnc_call',0]; 'WEST ELIMINATED!' remoteExec ['systemChat'];"]] call VVM_fnc_createTrigger; // Add trigger for all attackers dead round end condition.
               VVR_Trg4 = [["p",VVR_DefPos],["sc","time >= (VVR_ROUNDSTARTT + VVR_ROUNDTL)"],["sa","{VVR_ROUNDTLE = true;} remoteExec ['BIS_fnc_call',0]; 'ROUND TIME LIMIT ELAPSED!' remoteExec ['systemChat'];"]] call VVM_fnc_createTrigger; // Add trigger for time limit round end condition.
             };
             if (time >= (VVR_ROUNDSTARTT + VVR_PREPTL)) then { VVR_PREPTLE = true; };
@@ -104,8 +104,8 @@ if (modVVRushSwitch == 1) then {
               deleteMarker "ObjMarker";
               deleteVehicle VVR_Obj;
               deleteVehicle VVR_Trg1;
-              //deleteVehicle VVR_Trg2;
-              //deleteVehicle VVR_Trg3;
+              deleteVehicle VVR_Trg2;
+              deleteVehicle VVR_Trg3;
               deleteVehicle VVR_Trg4;
               if ([VVR_DEFUSED,true] call BIS_fnc_areEqual) then {VVR_WSCORE = VVR_WSCORE + 1; WSIGN setObjectTextureGlobal [0,(format["mods\VVRush\img\0%1.jpg",VVR_WSCORE])]}; // Set west score sign.
               if ([VVR_ROUNDTLE,true] call BIS_fnc_areEqual) then {VVR_ESCORE = VVR_ESCORE + 1; ESIGN setObjectTextureGlobal [0,(format["mods\VVRush\img\0%1.jpg",VVR_ESCORE])]}; // Set east score sign.
@@ -128,8 +128,8 @@ if (modVVRushSwitch == 1) then {
               VVR_ROUNDTLE = false;
               VVR_GAMESTATE = 0;
             } else {
-              format ['FINAL SCORES: WEST: %1 EAST: %2',VVR_WSCORE,VVR_ESCORE] remoteExec ["systemChat"];
-              ["end1",true] remoteExecCall ['BIS_fnc_endMission',0]; 'MISSION ENDED!' remoteExec ["systemChat"]; breakOut "Main"; // End mission.
+              format ['MISSION ENDED! FINAL SCORES: WEST: %1 EAST: %2',VVR_WSCORE,VVR_ESCORE] remoteExec ["systemChat"];
+              ["end1",true] remoteExecCall ['BIS_fnc_endMission',0]; breakOut "Main"; // End mission.
             };
           };
         };
