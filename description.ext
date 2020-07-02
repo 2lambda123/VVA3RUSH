@@ -2,9 +2,9 @@
 #include "cfg\Init.hpp"
 class Header { // http://goo.gl/Xd3vW#header
   gameType = TDM; // http://community.bistudio.com/wiki/Multiplayer_Game_Types
-  minPlayers = 1;
+  minPlayers = 2;
   maxPlayers = 64;
-  playerCountMultipleOf = 1;
+  playerCountMultipleOf = 2;
 };
 author = "VigilVindex"; // http://goo.gl/Xd3vW#author
 briefingName = "VVA3Rush";

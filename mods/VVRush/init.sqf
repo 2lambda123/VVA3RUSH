@@ -72,7 +72,22 @@ if (modVVRushSwitch == 1) then {
               VVR_Positions = [VVR_ObjLoc] call BIS_fnc_buildingPositions; // count building locations
               VVR_ObjLoc = selectRandom VVR_Positions;
               VVR_ObjMarker = [["n","ObjMarker"],["p",VVR_ObjLoc],["c",11]] call VVM_fnc_createMarker; // create a marker
+
               VVR_Obj = createVehicle ["Land_DataTerminal_01_F", VVR_ObjLoc, [], 0, "CAN_COLLIDE"]; // Spawn rush objective.
+
+              _posCaller = VVR_ObjLoc; //_posCaller = getPosATL _caller;
+              _lineStartZ = (_posCaller select 2) + 0.1;
+              _lineEndZ = (_posCaller select 2) - 0.2;
+              _posX = _posCaller select 0;
+              _posY = _posCaller select 1;
+              _posASL_start = ATLToASL [_posX,_posY,_lineStartZ];
+              _posASL_end = ATLToASL [_posX,_posY,_lineEndZ];
+              _intersections = lineIntersectsSurfaces [_posASL_start, _posASL_end, _caller, _target, true, 1];
+              _intersect = (_intersections select 0) select 0;
+              _intersectATL = ASLToATL _intersect;
+              _container = createVehicle ["GroundWeaponHolder_Scripted", _intersectATL, [], 0, "NONE"];
+              _container setPos _intersectATL;
+
               VVR_DefPos = [getMarkerPos VVR_ObjMarker, 1, 10, 1, 0, 20, 0] call BIS_fnc_findSafePos;
               VVR_DefMarker = [["n","DefMarker"],["p",VVR_DefPos],["c",9]] call VVM_fnc_createMarker; // create a marker
               VVR_AttPos = [getMarkerPos VVR_ObjMarker, 100, 200, 1, 0, 20, 0] call BIS_fnc_findSafePos;
