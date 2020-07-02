@@ -8,6 +8,7 @@ Arguments: index name     (default) TYPE    {Required} min,max    "values"
            d     debug    (false)   BOOLEAN {N}        false,true "Disabled","Enabled"
 Returns: ARRAY
 Usage: [["d",false]] call VVRush_fnc_getMapRushLocations;
+TODO: Add building classnames for maps. Verify search radius is correct for maps. Altis. Chernarus, Livonia, Weferlingen, Malden, PKL, Takistan, Tanoa, VT7, Rosche.
 */
 if (isNil "_this") exitWith {["%1 Function called without arguments.",time] call BIS_fnc_error;false;};
 if !(_this isEqualType []) exitWith {["%1 Function called without arguments array.",time] call BIS_fnc_error;false;};
