@@ -1,7 +1,4 @@
-/* Name: init.sqf - Description: Initialises the VVRush module. - Authors: vigil.vindex@gmail.com - License: https://creativecommons.org/licenses/by-sa/4.0/
-Created: 2020/06/09 Updated: 2020/07/02 Version: 0.0.1
-Todo: FIX BOXES SPAWN HEIGHT, FIX ROUND END FORCE RESPAWN, SCRIPT INITIAL SPAWN LOCATION ASSETS, GAMESTATE FOR NOT ENOUGH PLAYERS, MULTIPLE OBJECTIVES, KILLFEED, ROUND STATS, PLAYER STATS, OBJECTIVE TYPES (Static,Dynamic,Sequential,Random)
-*/
+/* Name: init.sqf - Description: Initialises the VVRush module. - Authors: vigil.vindex@gmail.com - License: https://creativecommons.org/licenses/by-sa/4.0/ - Created: 2020/06/09 Updated: 2020/07/02 Version: 0.0.1 */
 if (isNil "modVVRushSwitch") then {modVVRushSwitch = 0;};
 if (modVVRushSwitch == 1) then {
   if (modDebug == 1) then { diag_log format ["#%1#%2#%3#Loading VVRush.#",time,__FILE__ select [count PATH],__LINE__]; systemChat "Loading VVRush."; };

@@ -15,16 +15,27 @@ A team deathmatch mission for 64 players where defenders protect a bomb that att
 ## TODO
 
 * DEBUG TRIGGERS
-* OBJECTIVE TYPES
+* OBJECTIVE TYPES (Static, Dynamic, Sequential, Random)
+* FIX OBJECTIVE SPAWN HEIGHT IN BUILDINGS
+* FIX ROUND END FORCE RESPAWN
+* SCRIPT INITIAL SPAWN LOCATION ASSETS
+* GAMESTATE FOR NOT ENOUGH PLAYERS
+* MULTIPLE OBJECTIVES
+* KILLFEED
+* ROUND STATS
+* PLAYER STATS
+* RESPAWN
+* REVIVE
+* SPECTATOR / ZEUS
+* MODS (ACE, TFAR, ACRE)
 
 ## Modules
 
-* [CoreTime](https://forums.bohemia.net/forums/topic/129602-mp-fast-time-fsm-jip-compatible/)
-* [DateTime]
 * [FTPP]
 * [JIPTP]
 * [RandomWeather]
 * [SHK]
+* [VVDT]
 * [VVLO]
 * [VVM]
 * [VVRush]
