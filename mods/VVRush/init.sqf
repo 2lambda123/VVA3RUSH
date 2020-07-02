@@ -14,8 +14,8 @@ if (modVVRushSwitch == 1) then {
     // PREPARE
     VVR_ObjLocs = [] call VVRush_fnc_getMapRushLocations; // Get An Array Of Rush Location Buildings On The Map.
     VVR_GAMESTATE = 0; // Mission Control Flow Counter
-    VVR_EREADY = true; // East Side Ready Switch
-    VVR_WREADY = true; // West Side Ready Switch
+    VVR_EREADY = false; // East Side Ready Switch
+    VVR_WREADY = false; // West Side Ready Switch
     VVR_EDEAD = false; // East Side Eliminated Switch
     VVR_WDEAD = false; // West Side Eliminated Switch
     VVR_ESCORE = 0; // East Score Counter
