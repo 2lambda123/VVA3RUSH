@@ -38,10 +38,17 @@ if (modVVRushSwitch == 1) then {
       {if (hasInterface) then {null = [EAMMO,"EAST"] execVM "scripts\organized_arsenal.sqf";}} remoteExec ["BIS_fnc_call",0,true]; // Add east arsenal.
       {if (hasInterface) then {null = [WAMMO,"WEST"] execVM "scripts\organized_arsenal.sqf";}} remoteExec ["BIS_fnc_call",0,true]; // Add west arsenal.
     };
-    [EFLAG,["START ROUND",{{systemChat 'EAST READY!'; VVR_EREADY = true;} remoteExec ["BIS_fnc_call",0];}]] remoteExec ["addAction",0,true]; // Add east start action.
-    [WFLAG,["START ROUND",{{systemChat 'WEST READY!'; VVR_WREADY = true;} remoteExec ["BIS_fnc_call",0];}]] remoteExec ["addAction",0,true]; // Add west start action.
-    [EFLAG,["END MATCH",{{systemChat 'EAST CONCEDED!';} remoteExec ["BIS_fnc_call",0]; ["end1",true] remoteExecCall ['BIS_fnc_endMission',0];}]] remoteExec ["addAction",0,true]; // Add east concede action.
-    [WFLAG,["END MATCH",{{systemChat 'WEST CONCEDED!';} remoteExec ["BIS_fnc_call",0]; ["end1",true] remoteExecCall ['BIS_fnc_endMission',0];}]] remoteExec ["addAction",0,true]; // Add concede west action.
+    [EFLAG,["Start Round",{{systemChat 'EAST READY!'; VVR_EREADY = true;} remoteExec ["BIS_fnc_call",0];}]] remoteExec ["addAction",0,true]; // Add east start action.
+    [WFLAG,["Start Round",{{systemChat 'WEST READY!'; VVR_WREADY = true;} remoteExec ["BIS_fnc_call",0];}]] remoteExec ["addAction",0,true]; // Add west start action.
+    [EFLAG,["End Match",{{systemChat 'EAST CONCEDED!';} remoteExec ["BIS_fnc_call",0]; ["end1",true] remoteExecCall ['BIS_fnc_endMission',0];}]] remoteExec ["addAction",0,true]; // Add east concede action.
+    [WFLAG,["End Match",{{systemChat 'WEST CONCEDED!';} remoteExec ["BIS_fnc_call",0]; ["end1",true] remoteExecCall ['BIS_fnc_endMission',0];}]] remoteExec ["addAction",0,true]; // Add concede west action.
+	  if (isClass (configFile >> "CfgPatches" >> "ace_common")) then {
+		  EFLAG addAction ["Heal All [ACE]", "{[_x, _x] call ace_medical_treatment_fnc_fullHeal} forEach allPlayers"]; 
+      WFLAG addAction ["Heal All [ACE]", "{[_x, _x] call ace_medical_treatment_fnc_fullHeal} forEach allPlayers"]; 
+	  }	else {
+		  EFLAG addAction ["Heal All", "{_x setDamage 0;} forEach allPlayers"];
+      WFLAG addAction ["Heal All", "{_x setDamage 0;} forEach allPlayers"];
+	  };
     ESIGN setObjectTextureGlobal [0,(format["mods\VVRush\img\0%1.jpg",VVR_ESCORE])]; // Set east score sign.
     WSIGN setObjectTextureGlobal [0,(format["mods\VVRush\img\0%1.jpg",VVR_WSCORE])]; // Set west score sign.
     "WAITING FOR TEAMS TO START ROUND!" remoteExec ["systemChat"];
