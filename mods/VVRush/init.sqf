@@ -1,6 +1,6 @@
 /* Name: init.sqf - Description: Initialises the VVRush module. - Authors: vigil.vindex@gmail.com - License: https://creativecommons.org/licenses/by-sa/4.0/
-Created: 2020/06/09 Updated: 2020/06/10 Version: 0.0.1
-Todo: SCRIPT INITIAL SPAWN LOCATION ASSETS, GAMESTATE FOR NOT ENOUGH PLAYERS, MULTIPLE OBJECTIVES, KILLFEED, ROUND STATS, PLAYER STATS, OBJECTIVE TYPES (Static,Dynamic,Sequential,Random)
+Created: 2020/06/09 Updated: 2020/07/02 Version: 0.0.1
+Todo: FIX BOXES SPAWN HEIGHT, FIX ROUND END FORCE RESPAWN, SCRIPT INITIAL SPAWN LOCATION ASSETS, GAMESTATE FOR NOT ENOUGH PLAYERS, MULTIPLE OBJECTIVES, KILLFEED, ROUND STATS, PLAYER STATS, OBJECTIVE TYPES (Static,Dynamic,Sequential,Random)
 */
 if (isNil "modVVRushSwitch") then {modVVRushSwitch = 0;};
 if (modVVRushSwitch == 1) then {
@@ -13,7 +13,7 @@ if (modVVRushSwitch == 1) then {
     if (isNil "modVVRushPrepTimeSwitch") then {modVVRushPrepTimeSwitch = 3;};
     if (isNil "modVVRushRoundTimeSwitch") then {modVVRushRoundTimeSwitch = 9;};
     if (isNil "modVVRushDefuseTimeSwitch") then {modVVRushDefuseTimeSwitch = 1;};
-    if (isNil "modVVRushArsenalSwitch") then {modVVRushArsenalSwitch = 0;};
+    if (isNil "modVVRushArsenalSwitch") then {modVVRushArsenalSwitch = 1;};
     // PREPARE
     VVR_ObjLocs = [] call VVRush_fnc_getMapRushLocations; // Get An Array Of Rush Location Buildings On The Map.
     VVR_GAMESTATE = 0; // Mission Control Flow Counter
@@ -34,12 +34,17 @@ if (modVVRushSwitch == 1) then {
     VVR_ROUNDSTART = false; // Round Started Switch
     VVR_ROUNDSTARTT = 0; // Round Start Time Counter
     {["Preload"] call BIS_fnc_arsenal;} remoteExec ["BIS_fnc_call",0,true];
-    //[EAMMO,["Arsenal",{["Open",true] call BIS_fnc_arsenal;}]] remoteExec ["addAction",0,true]; // Add east arsenal.
-    //[WAMMO,["Arsenal",{["Open",true] call BIS_fnc_arsenal;}]] remoteExec ["addAction",0,true]; // Add west arsenal.
-    [EFLAG,["START",{{systemChat 'EAST READY!'; VVR_EREADY = true; publicVariable "VVR_EREADY";} remoteExec ["BIS_fnc_call",0];}]] remoteExec ["addAction",0,true]; // Add east start action.
-    [WFLAG,["START",{{systemChat 'WEST READY!'; VVR_WREADY = true; publicVariable "VVR_WREADY";} remoteExec ["BIS_fnc_call",0];}]] remoteExec ["addAction",0,true]; // Add west start action.
-    [EFLAG,["END",{{systemChat 'EAST CONCEDED!';} remoteExec ["BIS_fnc_call",0]; ["end1",true] remoteExecCall ['BIS_fnc_endMission',0];}]] remoteExec ["addAction",0,true]; // Add east concede action.
-    [WFLAG,["END",{{systemChat 'WEST CONCEDED!';} remoteExec ["BIS_fnc_call",0]; ["end1",true] remoteExecCall ['BIS_fnc_endMission',0];}]] remoteExec ["addAction",0,true]; // Add concede west action.
+    if (modVVRushArsenalSwitch == 0) then {
+      [EAMMO,["Arsenal",{["Open",true] call BIS_fnc_arsenal;}]] remoteExec ["addAction",0,true]; // Add east arsenal.
+      [WAMMO,["Arsenal",{["Open",true] call BIS_fnc_arsenal;}]] remoteExec ["addAction",0,true]; // Add west arsenal.
+    } else {
+      {if (hasInterface) then {null = [EAMMO,"EAST"] execVM "scripts\organized_arsenal.sqf";}} remoteExec ["BIS_fnc_call",0,true]; // Add east arsenal.
+      {if (hasInterface) then {null = [WAMMO,"WEST"] execVM "scripts\organized_arsenal.sqf";}} remoteExec ["BIS_fnc_call",0,true]; // Add west arsenal.
+    };
+    [EFLAG,["START ROUND",{{systemChat 'EAST READY!'; VVR_EREADY = true;} remoteExec ["BIS_fnc_call",0];}]] remoteExec ["addAction",0,true]; // Add east start action.
+    [WFLAG,["START ROUND",{{systemChat 'WEST READY!'; VVR_WREADY = true;} remoteExec ["BIS_fnc_call",0];}]] remoteExec ["addAction",0,true]; // Add west start action.
+    [EFLAG,["END MATCH",{{systemChat 'EAST CONCEDED!';} remoteExec ["BIS_fnc_call",0]; ["end1",true] remoteExecCall ['BIS_fnc_endMission',0];}]] remoteExec ["addAction",0,true]; // Add east concede action.
+    [WFLAG,["END MATCH",{{systemChat 'WEST CONCEDED!';} remoteExec ["BIS_fnc_call",0]; ["end1",true] remoteExecCall ['BIS_fnc_endMission',0];}]] remoteExec ["addAction",0,true]; // Add concede west action.
     ESIGN setObjectTextureGlobal [0,(format["mods\VVRush\img\0%1.jpg",VVR_ESCORE])]; // Set east score sign.
     WSIGN setObjectTextureGlobal [0,(format["mods\VVRush\img\0%1.jpg",VVR_WSCORE])]; // Set west score sign.
     VVR_GameLoop = [] spawn {
@@ -48,16 +53,16 @@ if (modVVRushSwitch == 1) then {
           case 0: { // Waiting for both sides to be ready.
             if ([VVR_EREADY,true] call BIS_fnc_areEqual && [VVR_WREADY,true] call BIS_fnc_areEqual) then {
               VVR_GAMESTATE = 1;
-              VVR_EREADY = false; publicVariable "VVR_EREADY";
-              VVR_WREADY = false; publicVariable "VVR_WREADY";
+              VVR_EREADY = false;
+              VVR_WREADY = false;
               "ROUND STARTED!" remoteExec ["systemChat"];
             };
           };
           case 1: { // Starting round.
             if ([VVR_ROUNDSTART,false] call BIS_fnc_areEqual) then {
               "ROUND PREPARATION PHASE STARTED!" remoteExec ["systemChat"];
-              VVR_ROUNDSTARTT = time; publicVariable "VVR_ROUNDSTARTT";
-              VVR_ROUNDSTART = true; publicVariable "VVR_ROUNDSTART";
+              VVR_ROUNDSTARTT = time;
+              VVR_ROUNDSTART = true;
               VVR_ObjLoc = selectRandom VVR_ObjLocs;
               VVR_Positions = [VVR_ObjLoc] call BIS_fnc_buildingPositions; // count building locations
               VVR_ObjMarker = [["n","ObjMarker"],["p",selectRandom VVR_Positions]] call VVM_fnc_createMarker; // create a marker
@@ -72,7 +77,7 @@ if (modVVRushSwitch == 1) then {
                 "_caller distance _target < 2", // Condition for the action to progress.
                 {[VVR_Obj,1] call BIS_fnc_dataTerminalAnimate; "BOMB DEFUSAL STARTED!" remoteExec ["systemChat"];}, // Code executed when action starts.
                 {"BOMB IS BEING DEFUSED!" remoteExec ["systemChat"];}, // Code executed on every progress tick.
-                {[VVR_Obj,3] call BIS_fnc_dataTerminalAnimate; "BOMB DEFUSED!" remoteExec ["systemChat"]; VVR_DEFUSED = true; publicVariable "VVR_DEFUSED";}, // Code executed on completion.
+                {[VVR_Obj,3] call BIS_fnc_dataTerminalAnimate; "BOMB DEFUSED!" remoteExec ["systemChat"]; {VVR_DEFUSED = true;} remoteExec ["BIS_fnc_call",0];}, // Code executed on completion.
                 {[VVR_Obj,0] call BIS_fnc_dataTerminalAnimate; "BOMB DEFUSAL INTERRUPTED!" remoteExec ["systemChat"];}, // Code executed on interrupted.
                 [], // Arguments passed to the scripts as _this select 3.
                 VVR_DEFUSET,0,true,false
@@ -80,9 +85,9 @@ if (modVVRushSwitch == 1) then {
               { if ((side _x) == East) then {_x setPos VVR_DefPos};} forEach allUnits; // Move defenders to location.
               // TODO : DEBUG TRIGGERS
               VVR_Trg1 = [["p",VVR_DefPos],["sc","[VVR_DEFUSED,true] call BIS_fnc_areEqual"]] call VVM_fnc_createTrigger; // Add trigger for bomb defusal round end condition.
-              VVR_Trg2 = [["p",VVR_DefPos],["rx",10000],["ry",10000],["ab",1],["at",1],["sa","VVR_EDEAD = true; publicVariable 'VVR_EDEAD'; 'EAST ELIMINATED!' remoteExec ['systemChat'];"]] call VVM_fnc_createTrigger; // Add trigger for all defenders dead round end condition.
-              VVR_Trg3 = [["p",VVR_DefPos],["rx",10000],["ry",10000],["ab",2],["at",1],["sa","VVR_WDEAD = true; publicVariable 'VVR_WDEAD'; 'WEST ELIMINATED!' remoteExec ['systemChat'];"]] call VVM_fnc_createTrigger; // Add trigger for all attackers dead round end condition.
-              VVR_Trg4 = [["p",VVR_DefPos],["sc","time >= (VVR_ROUNDSTARTT + VVR_ROUNDTL)"],["sa","VVR_ROUNDTLE = true; publicVariable 'VVR_ROUNDTLE'; 'ROUND TIME LIMIT ELAPSED!' remoteExec ['systemChat'];"]] call VVM_fnc_createTrigger; // Add trigger for time limit round end condition.
+              VVR_Trg2 = [["p",VVR_DefPos],["rx",10000],["ry",10000],["ab",1],["at",1],["sa","{VVR_EDEAD = true;} remoteExec ['BIS_fnc_call',0]; 'EAST ELIMINATED!' remoteExec ['systemChat'];"]] call VVM_fnc_createTrigger; // Add trigger for all defenders dead round end condition.
+              VVR_Trg3 = [["p",VVR_DefPos],["rx",10000],["ry",10000],["ab",2],["at",1],["sa","{VVR_WDEAD = true;} remoteExec ['BIS_fnc_call',0]; 'WEST ELIMINATED!' remoteExec ['systemChat'];"]] call VVM_fnc_createTrigger; // Add trigger for all attackers dead round end condition.
+              VVR_Trg4 = [["p",VVR_DefPos],["sc","time >= (VVR_ROUNDSTARTT + VVR_ROUNDTL)"],["sa","{VVR_ROUNDTLE = true;} remoteExec ['BIS_fnc_call',0]; 'ROUND TIME LIMIT ELAPSED!' remoteExec ['systemChat'];"]] call VVM_fnc_createTrigger; // Add trigger for time limit round end condition.
             };
             if (time >= (VVR_ROUNDSTARTT + VVR_PREPTL)) then { VVR_PREPTLE = true; };
             if ([VVR_PREPTLE,true] call BIS_fnc_areEqual) then {
@@ -110,10 +115,10 @@ if (modVVRushSwitch == 1) then {
               if ([VVR_ROUNDTLE,true] call BIS_fnc_areEqual) then {VVR_ESCORE = VVR_ESCORE + 1; ESIGN setObjectTextureGlobal [0,(format["mods\VVRush\img\0%1.jpg",VVR_ESCORE])]}; // Set east score sign.
               if ([VVR_WDEAD,true] call BIS_fnc_areEqual) then {VVR_ESCORE = VVR_ESCORE + 1; ESIGN setObjectTextureGlobal [0,(format["mods\VVRush\img\0%1.jpg",VVR_ESCORE])]}; // Set east score sign.
               if ([VVR_EDEAD,true] call BIS_fnc_areEqual) then {VVR_WSCORE = VVR_WSCORE + 1; WSIGN setObjectTextureGlobal [0,(format["mods\VVRush\img\0%1.jpg",VVR_WSCORE])]}; // Set west score sign.
-              VVR_ROUNDS = VVR_ROUNDS + 1; publicVariable "VVR_ROUNDS";
-              VVR_DEFUSED = false; publicVariable "VVR_DEFUSED";
-              VVR_PREPTLE = false; publicVariable "VVR_PREPTLE";
-              VVR_GAMESTATE = 3; publicVariable "VVR_GAMESTATE";
+              VVR_ROUNDS = VVR_ROUNDS + 1;
+              VVR_DEFUSED = false;
+              VVR_PREPTLE = false;
+              VVR_GAMESTATE = 3;
             };
           };
           case 3: { // Preparing next round or ending mission.
@@ -122,9 +127,9 @@ if (modVVRushSwitch == 1) then {
               {forceRespawn _x} forEach allUnits;
               //{ if ((side _x) == East) then {_x setPos getMarkerPos "respawn_east"};} forEach allUnits; // Move east to respawn east location.
               //{ if ((side _x) == West) then {_x setPos getMarkerPos "respawn_west"};} forEach allUnits; // Move west to respawn west location.
-              VVR_ROUNDSTART = false; publicVariable "VVR_ROUNDSTART";
-              VVR_ROUNDTLE = false; publicVariable "VVR_ROUNDTLE";
-              VVR_GAMESTATE = 0; publicVariable "VVR_GAMESTATE";
+              VVR_ROUNDSTART = false;
+              VVR_ROUNDTLE = false;
+              VVR_GAMESTATE = 0;
             } else {
               ["end1",true] remoteExecCall ['BIS_fnc_endMission',0]; 'MISSION ENDED!' remoteExec ["systemChat"]; breakOut "Main"; // End mission.
             };

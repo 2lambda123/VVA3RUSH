@@ -5023,7 +5023,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="if (hasInterface) then {null = [this,""WEST""] execVM ""scripts\organized_arsenal.sqf"";};";
 				name="WAMMO";
 			};
 			id=3611;
@@ -5064,7 +5063,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="if (hasInterface) then {null = [this,""EAST""] execVM ""scripts\organized_arsenal.sqf"";};";
 				name="EAMMO";
 			};
 			id=3612;
