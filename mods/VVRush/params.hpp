@@ -20,13 +20,13 @@ class modVVRushPrepTimeSwitch {
   title    = "VVRush Module: Preparation Time";
   values[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
   texts[]  = {"One Minute","Two Minutes","Three Minutes","Four Minutes","Five Minutes","Six Minutes","Seven Minutes","Eight Minutes","Nine Minutes"};
-  default  = 5;
+  default  = 1;
 };
 class modVVRushRoundTimeSwitch {
   title    = "VVRush Module: Round Time";
   values[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30};
   texts[]  = {"One Minute","Two Minutes","Three Minutes","Four Minutes","Five Minutes","Six Minutes","Seven Minutes","Eight Minutes","Nine Minutes"};
-  default  = 15;
+  default  = 5;
 };
 class modVVRushDefuseTimeSwitch {
   title    = "VVRush Module: Defusal Time";

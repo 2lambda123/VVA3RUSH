@@ -1,0 +1,1 @@
+["Initialize", [ player, [], true ]] call BIS_fnc_EGSpectator; // https://community.bistudio.com/wiki/BIS_fnc_EGSpectator
