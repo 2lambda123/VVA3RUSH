@@ -4,7 +4,7 @@ respawnButton = 1; // http://goo.gl/Xd3vW#respawnButton
 respawnDelay = 10; // http://goo.gl/Xd3vW#respawnDelay
 respawnDialog = 1; // http://goo.gl/Xd3vW#respawnDialog
 respawnOnStart = -1; // http://goo.gl/Xd3vW#respawnOnStart
-respawnTemplates[] = {"Spectator","MenuPosition"}; // http://goo.gl/Xd3vW#respawnTemplates
+respawnTemplates[] = {"VVRevive"}; // http://goo.gl/Xd3vW#respawnTemplates
 respawnTemplatesWEST[] = {};
 respawnTemplatesEAST[] = {};
 respawnTemplatesGUER[] = {};
@@ -22,5 +22,9 @@ respawnMagazinesGUER[] = {};
 respawnMagazinesCIV[] = {};
 respawnVehicleDelay = 60; // http://goo.gl/Xd3vW#respawnVehicleDelay
 class CfgRespawnInventory {}; // https://community.bistudio.com/wiki/Description.ext#CfgRespawnInventories
-class CfgRespawnTemplates {}; // http://community.bistudio.com/wiki/Arma_3_Respawn#Respawn_Templates_2
+class CfgRespawnTemplates {
+  #ifdef modVVRush
+    #include "..\mods\VVRush\respawn.hpp"
+  #endif
+}; // http://community.bistudio.com/wiki/Arma_3_Respawn#Respawn_Templates_2
 class CfgRoles {}; // https://community.bistudio.com/wiki/Description.ext#CfgRoles
