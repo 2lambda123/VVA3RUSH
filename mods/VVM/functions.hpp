@@ -25,6 +25,7 @@ class VVM {
     file = "mods\VVM\functions\locations";
     class getSafePosition {};
     class getMapLocations {};
+    class getMapCenterPosition {};
   };
   class markers {
     file = "mods\VVM\functions\markers";
