@@ -36,7 +36,7 @@ if (typeName (_this select 1) == "SCALAR") then {
 for "_i" from 0 to (_elements-1) step 2 do {
    if ((_parameters select _i) > _now) exitWith{_nextElem = _i}
 };
-if isNil "_nextElem" then {_nextElem = 0};
+if (isNil "_nextElem") then {_nextElem = 0};
 _prevElem = _nextElem - 2; if (_prevElem < 0) then {_prevElem = _elements - 1};
 // find out about current cycles length
 if ((_parameters select _prevElem) < (_parameters select _nextElem)) then {
