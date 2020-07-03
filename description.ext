@@ -29,3 +29,4 @@ saving = 0; // http://goo.gl/Xd3vW#saving
 scriptedPlayer = 0; // http://goo.gl/Xd3vW#scriptedPlayer
 skipLobby = 0; // http://goo.gl/Xd3vW#skipLobby
 weaponPool = 0;
+cba_settings_hasSettingsFile = 1;

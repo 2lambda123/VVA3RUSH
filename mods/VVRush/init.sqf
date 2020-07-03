@@ -43,11 +43,11 @@ if (modVVRushSwitch == 1) then {
     [EFLAG,["End Match",{{systemChat 'EAST CONCEDED!';} remoteExec ["BIS_fnc_call",0]; ["end1",true] remoteExecCall ['BIS_fnc_endMission',0];}]] remoteExec ["addAction",0,true]; // Add east concede action.
     [WFLAG,["End Match",{{systemChat 'WEST CONCEDED!';} remoteExec ["BIS_fnc_call",0]; ["end1",true] remoteExecCall ['BIS_fnc_endMission',0];}]] remoteExec ["addAction",0,true]; // Add concede west action.
 	  if (isClass (configFile >> "CfgPatches" >> "ace_common")) then {
-		  EFLAG addAction ["Heal All [ACE]", "{[_x, _x] call ace_medical_treatment_fnc_fullHeal} forEach allPlayers"]; 
-      WFLAG addAction ["Heal All [ACE]", "{[_x, _x] call ace_medical_treatment_fnc_fullHeal} forEach allPlayers"]; 
+      [EFLAG,["Heal All [ACE]",{{[_x, _x] call ace_medical_treatment_fnc_fullHeal} forEach allPlayers;}]] remoteExec ["addAction",0,true]; // Add east ace heal.
+      [WFLAG,["Heal All [ACE]",{{[_x, _x] call ace_medical_treatment_fnc_fullHeal} forEach allPlayers;}]] remoteExec ["addAction",0,true]; // Add west ace heal.
 	  }	else {
-		  EFLAG addAction ["Heal All", "{_x setDamage 0;} forEach allPlayers"];
-      WFLAG addAction ["Heal All", "{_x setDamage 0;} forEach allPlayers"];
+      [EFLAG,["Heal All",{{_x setDamage 0;} forEach allPlayers;}]] remoteExec ["addAction",0,true]; // Add east heal.
+      [WFLAG,["Heal All",{{_x setDamage 0;} forEach allPlayers;}]] remoteExec ["addAction",0,true]; // Add west heal.
 	  };
     ESIGN setObjectTextureGlobal [0,(format["mods\VVRush\img\0%1.jpg",VVR_ESCORE])]; // Set east score sign.
     WSIGN setObjectTextureGlobal [0,(format["mods\VVRush\img\0%1.jpg",VVR_WSCORE])]; // Set west score sign.
@@ -73,7 +73,7 @@ if (modVVRushSwitch == 1) then {
               VVR_Positions = [VVR_ObjLoc] call BIS_fnc_buildingPositions; // count building locations
               VVR_ObjLoc = selectRandom VVR_Positions;
               VVR_ObjMarker = [["n","ObjMarker"],["p",VVR_ObjLoc],["c",11]] call VVM_fnc_createMarker; // create a marker
-              /*_posCaller = getPosATL VVR_ObjBuilding; //_posCaller = getPosATL _caller;
+              /* _posCaller = getPosATL VVR_ObjBuilding; //_posCaller = getPosATL _caller;
               _lineStartZ = (_posCaller select 2) + 0.1;
               _lineEndZ = (_posCaller select 2) - 0.2;
               _posX = _posCaller select 0;
@@ -82,22 +82,22 @@ if (modVVRushSwitch == 1) then {
               _posASL_end = ATLToASL [_posX,_posY,_lineEndZ];
               _intersections = lineIntersectsSurfaces [_posASL_start, _posASL_end, VVR_ObjLoc, VVR_ObjBuilding, true, 1];
               _intersect = (_intersections select 0) select 0;
-              _intersectATL = ASLToATL _intersect;*/
+              _intersectATL = ASLToATL _intersect; */
               VVR_Obj = createVehicle ["Land_DataTerminal_01_F", VVR_ObjLoc, [], 0, "CAN_COLLIDE"]; // Spawn rush objective.
+              [VVR_Obj,"DEFUSE","\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa","\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa",
+                "_this distance _target < 2", // Condition for the action to be shown.  && (side _caller == west)
+                "_caller distance _target < 2", // Condition for the action to progress.  && (side _caller == west)
+                {[_target,1] call BIS_fnc_dataTerminalAnimate; "BOMB DEFUSAL STARTED!" remoteExec ["systemChat"];}, // Code executed when action starts.
+                {_current = _this select 4; _total = _this select 5; _progress = round ((_current / _total) * 100); _string = format ["BOMB IS BEING DEFUSED! %1%2 COMPLETE!",_progress,"%"]; _string remoteExec ["systemChat"];}, // Code executed on every progress tick.
+                {[_target,3] call BIS_fnc_dataTerminalAnimate; "BOMB DEFUSED!" remoteExec ["systemChat"]; {VVR_DEFUSED = true;} remoteExec ["BIS_fnc_call",0];}, // Code executed on completion.
+                {[_target,0] call BIS_fnc_dataTerminalAnimate; "BOMB DEFUSAL INTERRUPTED!" remoteExec ["systemChat"];}, // Code executed on interrupted.
+                [], // Arguments passed to the scripts as _this select 3.
+                VVR_DEFUSET,0,true,false
+              ] remoteExec ["BIS_fnc_holdActionAdd",0,true]; // Add defuse objective action.
               VVR_DefPos = [getMarkerPos VVR_ObjMarker, 1, 10, 1, 0, 20, 0] call BIS_fnc_findSafePos;
               VVR_DefMarker = [["n","DefMarker"],["p",VVR_DefPos],["c",9]] call VVM_fnc_createMarker; // create a marker
               VVR_AttPos = [getMarkerPos VVR_ObjMarker, 100, 200, 1, 0, 20, 0] call BIS_fnc_findSafePos;
               VVR_AttMarker = [["n","AttMarker"],["p",VVR_AttPos],["c",2]] call VVM_fnc_createMarker; // create a marker
-              [VVR_Obj,"DEFUSE","\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa","\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa",
-                "_this distance _target < 2", // Condition for the action to be shown.  && (side _caller == west)
-                "_caller distance _target < 2", // Condition for the action to progress.  && (side _caller == west)
-                {[VVR_Obj,1] call BIS_fnc_dataTerminalAnimate; "BOMB DEFUSAL STARTED!" remoteExec ["systemChat"];}, // Code executed when action starts.
-                {_current = _this select 4; _total = _this select 5; _progress = round ((_current / _total) * 100); _string = format ["BOMB IS BEING DEFUSED! %1%2 COMPLETE!",_progress,"%"]; _string remoteExec ["systemChat"];}, // Code executed on every progress tick.
-                {[VVR_Obj,3] call BIS_fnc_dataTerminalAnimate; "BOMB DEFUSED!" remoteExec ["systemChat"]; {VVR_DEFUSED = true;} remoteExec ["BIS_fnc_call",0];}, // Code executed on completion.
-                {[VVR_Obj,0] call BIS_fnc_dataTerminalAnimate; "BOMB DEFUSAL INTERRUPTED!" remoteExec ["systemChat"];}, // Code executed on interrupted.
-                [], // Arguments passed to the scripts as _this select 3.
-                VVR_DEFUSET,0,true,false
-              ] remoteExec ["BIS_fnc_holdActionAdd",0,true]; // Add defuse objective action.
               { if ((side _x) == East) then {_x setPos VVR_DefPos};} forEach allUnits; // Move defenders to location.
               VVR_Trg1 = [["p",VVR_DefPos],["sc","[VVR_DEFUSED,true] call BIS_fnc_areEqual"]] call VVM_fnc_createTrigger; // Add trigger for bomb defusal round end condition.
               VVR_Trg2 = [["p",VVR_DefPos],["rx",10000],["ry",10000],["ab",1],["at",1],["sa","{VVR_EDEAD = true;} remoteExec ['BIS_fnc_call',0]; 'EAST ELIMINATED!' remoteExec ['systemChat'];"]] call VVM_fnc_createTrigger; // Add trigger for all defenders dead round end condition.
