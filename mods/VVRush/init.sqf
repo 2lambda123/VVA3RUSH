@@ -84,7 +84,6 @@ if (modVVRushSwitch == 1) then {
               _intersect = (_intersections select 0) select 0;
               _intersectATL = ASLToATL _intersect;*/
               VVR_Obj = createVehicle ["Land_DataTerminal_01_F", VVR_ObjLoc, [], 0, "CAN_COLLIDE"]; // Spawn rush objective.
-              VVR_Obj setPos VVR_ObjLoc;
               VVR_DefPos = [getMarkerPos VVR_ObjMarker, 1, 10, 1, 0, 20, 0] call BIS_fnc_findSafePos;
               VVR_DefMarker = [["n","DefMarker"],["p",VVR_DefPos],["c",9]] call VVM_fnc_createMarker; // create a marker
               VVR_AttPos = [getMarkerPos VVR_ObjMarker, 100, 200, 1, 0, 20, 0] call BIS_fnc_findSafePos;
