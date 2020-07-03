@@ -54,7 +54,7 @@ call compile preprocessfilelinenumbers 'scripts\briefing.sqf';
 				[_kill_HUD,0,0.3,2,0,0,7017] spawn bis_fnc_dynamicText;
 				[[format["%1 Killed %2 from %3 m with %4 ", name player,_killed_Name,floor _distance,_weapon]]remoteExec["systemChat"]];
 				_kill_info = format["<img size='1' shadow='1' image='%1'/> %2 Killed <t color='%3'> %4 <t color='#FFD700'> from %5 m with <t color='#FF0000'> %6 </t>",_pictureweapon,name _killer,_killed_Color,_killed_Name,floor _distance,_weapon];
-				_Spawn_kill_info=[["<t size='0.6' align='left'> with %4 " + _kill_info + "</t>",safeZoneX,safeZoneY,10,0,0,7016] remoteExec ["BIS_fnc_dynamicText"]];
+				_Spawn_kill_info=[["<t size='0.6' align='left'>" + _kill_info + "</t>",safeZoneX,safeZoneY,10,0,0,7016] remoteExec ["BIS_fnc_dynamicText"]];
 			};
 		};			
 	}];
