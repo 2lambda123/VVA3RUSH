@@ -45,6 +45,7 @@ call compile preprocessfilelinenumbers 'scripts\briefing.sqf';
 				private _weapon = getText(configFile >> "CfgWeapons" >> currentWeapon (vehicle _killer) >> "displayname");
 				_killed_Color = (side group _killed call BIS_fnc_sideColor) call BIS_fnc_colorRGBtoHTML;
 				_weapon = currentWeapon _killer;
+				_weapon_name = gettext (configFile >> "cfgWeapons" >> _weapon >> "displayName");
 				_pictureweapon = gettext (configFile >> "cfgWeapons" >> _weapon >> "picture");
 				if (_pictureweapon == "") then {
 					_weapon = typeOf (vehicle _killer);
@@ -52,8 +53,8 @@ call compile preprocessfilelinenumbers 'scripts\briefing.sqf';
 				};
 				_kill_HUD = format["<t size='0.5'> Killed <t size='0.8'> <t color='%1'> %2 <t color='#FFD700'> %3 m </t>",_killed_Color,_killed_Name,floor _distance];	
 				[_kill_HUD,0,0.3,2,0,0,7017] spawn bis_fnc_dynamicText;
-				[[format["%1 Killed %2 from %3 m with %4 ", name player,_killed_Name,floor _distance,_weapon]]remoteExec["systemChat"]];
-				_kill_info = format["<img size='1' shadow='1' image='%1'/> %2 Killed <t color='%3'> %4 <t color='#FFD700'> from %5 m with <t color='#FF0000'> %6 </t>",_pictureweapon,name _killer,_killed_Color,_killed_Name,floor _distance,_weapon];
+				[[format["%1 Killed %2 from %3 m with %4 ", name player,_killed_Name,floor _distance,_weapon_name]]remoteExec["systemChat"]];
+				_kill_info = format["<img size='1' shadow='1' image='%1'/> %2 Killed <t color='%3'> %4 <t color='#FFD700'> from %5 m with <t color='#FF0000'> %6 </t>",_pictureweapon,name _killer,_killed_Color,_killed_Name,floor _distance,_weapon_name];
 				_Spawn_kill_info=[["<t size='0.6' align='left'>" + _kill_info + "</t>",safeZoneX,safeZoneY,10,0,0,7016] remoteExec ["BIS_fnc_dynamicText"]];
 			};
 		};			
