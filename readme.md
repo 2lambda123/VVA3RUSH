@@ -16,12 +16,11 @@ A team deathmatch mission for 64 players where defenders protect a bomb that att
 
 * MULTIPLE OBJECTIVES / TYPES (Static, Dynamic, Sequential, Random)
 * SCRIPT INITIAL SPAWN LOCATION ASSETS
-* GAMESTATE FOR NOT ENOUGH PLAYERS
-* KILL FEED
 * ROUND & PLAYER STATS
 * RESPAWN / REVIVE
 * SPECTATOR / ZEUS
-* MODS (ACE, TFAR)
+* ACE MEDICAL
+* Weather conditions for each stage of a round.
 
 ## Modules
 
