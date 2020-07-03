@@ -275,7 +275,7 @@ switch (toLowerANSI worldName) do {
   case "takistan": {_classnames = _classnames + _takistan};
   case "tanoa": {_classnames = _classnames + _tanoa};
   case "gm_weferlingen_winter": {_classnames = _classnames + _weferlingen};
-  case "gm_weferlingen": {_classnames = _classnames + _weferlingen};
+  case "gm_weferlingen_summer": {_classnames = _classnames + _weferlingen};
   default {};
 };
 _classnames = _classnames + _unknown;
