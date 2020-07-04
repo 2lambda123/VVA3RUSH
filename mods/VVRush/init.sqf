@@ -10,8 +10,9 @@ if (modVVRushSwitch == 1) then {
     if (isNil "modVVRushPrepTimeSwitch") then {modVVRushPrepTimeSwitch = 5;};
     if (isNil "modVVRushRoundTimeSwitch") then {modVVRushRoundTimeSwitch = 10;};
     if (isNil "modVVRushDefuseTimeSwitch") then {modVVRushDefuseTimeSwitch = 20;};
-    if (isNil "modVVRushMarkerSwitch") then {modVVRushMarkerSwitch = 0;};
+    if (isNil "modVVRushMarkerSwitch") then {modVVRushMarkerSwitch = 1;};
     if (isNil "modVVRushArsenalSwitch") then {modVVRushArsenalSwitch = 0;};
+    if (isNil "modVVRushASDistanceSwitch") then {modVVRushASDistanceSwitch = 200;};
     // PREPARE
     VVR_ObjLocs = [] call VVRush_fnc_getMapRushLocations; // Get An Array Of Rush Location Buildings On The Map.
     VVR_GAMESTATE = 0; // Mission Control Flow Counter
@@ -32,6 +33,7 @@ if (modVVRushSwitch == 1) then {
     VVR_ROUNDSTART = false; // Round Started Switch
     VVR_ROUNDSTARTT = 0; // Round Start Time Counter
     VVR_MARKERS = modVVRushMarkerSwitch; // Map Marker Behaviour Switch
+    VVR_ATTDIST = modVVRushASDistanceSwitch;
     {["Preload"] call BIS_fnc_arsenal;} remoteExec ["BIS_fnc_call",0,true];
     if (modVVRushArsenalSwitch == 0) then {
       [EAMMO,["Arsenal",{["Open",true] call BIS_fnc_arsenal;}]] remoteExec ["addAction",0,true]; // Add east arsenal.
@@ -70,9 +72,11 @@ if (modVVRushSwitch == 1) then {
               "ROUND PREPARATION PHASE STARTED!" remoteExec ["systemChat"];
               VVR_ROUNDSTARTT = time;
               VVR_ROUNDSTART = true;
-              VVR_ObjLoc = selectRandom VVR_ObjLocs;
-              VVR_ObjBuilding = nearestBuilding VVR_ObjLoc;
-              VVR_Positions = [VVR_ObjLoc] call BIS_fnc_buildingPositions; // count building locations
+              VVR_Positions = 0;
+              while {count VVR_Positions < 1} do {
+                VVR_ObjLoc = selectRandom VVR_ObjLocs;
+                VVR_Positions = [VVR_ObjLoc] call BIS_fnc_buildingPositions; // count building locations
+              };
               VVR_ObjLoc = selectRandom VVR_Positions;
               VVR_ObjMarker = [["n","ObjMarker"],["p",VVR_ObjLoc],["c",11]] call VVM_fnc_createMarker; // create a marker
               /* _posCaller = getPosATL VVR_ObjBuilding; //_posCaller = getPosATL _caller;
@@ -98,7 +102,7 @@ if (modVVRushSwitch == 1) then {
               ] remoteExec ["BIS_fnc_holdActionAdd",0,true]; // Add defuse objective action.
               VVR_DefPos = [getMarkerPos VVR_ObjMarker, 1, 10, 1, 0, 20, 0] call BIS_fnc_findSafePos;
               VVR_DefMarker = [["n","DefMarker"],["p",VVR_DefPos],["c",9]] call VVM_fnc_createMarker; // create a marker
-              VVR_AttPos = [getMarkerPos VVR_ObjMarker, 100, 200, 1, 0, 20, 0] call BIS_fnc_findSafePos;
+              VVR_AttPos = [getMarkerPos VVR_ObjMarker, VVR_ATTDIST, VVR_ATTDIST + 100, 1, 0, 20, 0] call BIS_fnc_findSafePos;
               VVR_AttMarker = [["n","AttMarker"],["p",VVR_AttPos],["c",2]] call VVM_fnc_createMarker; // create a marker
               { if ((side _x) == East) then {_x setPos VVR_DefPos};} forEach allUnits; // Move defenders to location.
               VVR_Trg1 = [["p",VVR_DefPos],["sc","[VVR_DEFUSED,true] call BIS_fnc_areEqual"]] call VVM_fnc_createTrigger; // Add trigger for bomb defusal round end condition.

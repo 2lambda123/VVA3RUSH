@@ -44,7 +44,13 @@ class modVVRushMarkerSwitch {
   title    = "VVRush Module: Marker Behaviour Type";
   values[] = {0,1,2};
   texts[]  = {"No Markers","Show Rough Marker","Show Precise Markers"};
-  default  = 0;
+  default  = 1;
+};
+class modVVRushASDistanceSwitch {
+  title    = "VVRush Module: Minimum Distance From Objective For Attackers Spawn Location (Metres)";
+  values[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000};
+  texts[]  = {"100","200","300","400","500","600","700","800","900","1000","1100","1200","1300","1400","1500","1600","1700","1800","1900","2000"};
+  default  = 200;
 };
 class modVVRushLocationSwitch {
   title    = "VVRush Module: Location Selection Type";
