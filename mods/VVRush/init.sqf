@@ -7,10 +7,11 @@ if (modVVRushSwitch == 1) then {
     // PARAMS
     if (isNil "modVVRushLocationSwitch") then {modVVRushLocationSwitch = 0;};
     if (isNil "modVVRushRoundsSwitch") then {modVVRushRoundsSwitch = 3;};
-    if (isNil "modVVRushPrepTimeSwitch") then {modVVRushPrepTimeSwitch = 3;};
-    if (isNil "modVVRushRoundTimeSwitch") then {modVVRushRoundTimeSwitch = 9;};
-    if (isNil "modVVRushDefuseTimeSwitch") then {modVVRushDefuseTimeSwitch = 1;};
-    if (isNil "modVVRushArsenalSwitch") then {modVVRushArsenalSwitch = 1;};
+    if (isNil "modVVRushPrepTimeSwitch") then {modVVRushPrepTimeSwitch = 5;};
+    if (isNil "modVVRushRoundTimeSwitch") then {modVVRushRoundTimeSwitch = 10;};
+    if (isNil "modVVRushDefuseTimeSwitch") then {modVVRushDefuseTimeSwitch = 20;};
+    if (isNil "modVVRushMarkerSwitch") then {modVVRushMarkerSwitch = 0;};
+    if (isNil "modVVRushArsenalSwitch") then {modVVRushArsenalSwitch = 0;};
     // PREPARE
     VVR_ObjLocs = [] call VVRush_fnc_getMapRushLocations; // Get An Array Of Rush Location Buildings On The Map.
     VVR_GAMESTATE = 0; // Mission Control Flow Counter
@@ -30,6 +31,7 @@ if (modVVRushSwitch == 1) then {
     VVR_PREPTLE = false; // Preparation Time Expired Switch
     VVR_ROUNDSTART = false; // Round Started Switch
     VVR_ROUNDSTARTT = 0; // Round Start Time Counter
+    VVR_MARKERS = modVVRushMarkerSwitch; // Map Marker Behaviour Switch
     {["Preload"] call BIS_fnc_arsenal;} remoteExec ["BIS_fnc_call",0,true];
     if (modVVRushArsenalSwitch == 0) then {
       [EAMMO,["Arsenal",{["Open",true] call BIS_fnc_arsenal;}]] remoteExec ["addAction",0,true]; // Add east arsenal.

@@ -14,7 +14,6 @@ A team deathmatch mission for 64 players where defenders protect a bomb that att
 
 ## TODO
 
-* DEBUG DEFUSE ACTION ISSUES IN MP
 * MULTIPLE OBJECTIVES
 * OBJECTIVE TYPES (Static Sequential List, Random Dynamic List)
 * SCRIPT INITIAL SPAWN LOCATION ASSETS
