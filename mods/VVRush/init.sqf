@@ -135,8 +135,8 @@ if (modVVRushSwitch == 1) then {
               };
               { if ((side _x) == East) then {_x setPos VVR_DefPos};} forEach allUnits; // Move defenders to location.
               VVR_Trg1 = [["p",VVR_DefPos],["sc","[VVR_DEFUSED,true] call BIS_fnc_areEqual"]] call VVM_fnc_createTrigger; // Add trigger for bomb defusal round end condition.
-              VVR_Trg2 = [["p",VVR_DefPos],["rx",1000000],["ry",1000000],["ab",1],["at",1],["sa","{VVR_EDEAD = true;} remoteExec ['BIS_fnc_call',0]; 'DEFENDERS ELIMINATED!' remoteExec ['systemChat'];"]] call VVM_fnc_createTrigger; // Add trigger for all defenders dead round end condition.
-              VVR_Trg3 = [["p",VVR_DefPos],["rx",1000000],["ry",1000000],["ab",2],["at",1],["sa","{VVR_WDEAD = true;} remoteExec ['BIS_fnc_call',0]; 'ATTACKERS ELIMINATED!' remoteExec ['systemChat'];"]] call VVM_fnc_createTrigger; // Add trigger for all attackers dead round end condition.
+              VVR_Trg2 = [["p",VVR_DefPos],["rx",10000],["ry",10000],["ab",1],["at",1],["sa","{VVR_EDEAD = true;} remoteExec ['BIS_fnc_call',0]; 'DEFENDERS ELIMINATED!' remoteExec ['systemChat'];"]] call VVM_fnc_createTrigger; // Add trigger for all defenders dead round end condition.
+              VVR_Trg3 = [["p",VVR_DefPos],["rx",100000],["ry",100000],["ab",2],["at",1],["sa","{VVR_WDEAD = true;} remoteExec ['BIS_fnc_call',0]; 'ATTACKERS ELIMINATED!' remoteExec ['systemChat'];"]] call VVM_fnc_createTrigger; // Add trigger for all attackers dead round end condition.
               VVR_Trg4 = [["p",VVR_DefPos],["sc","time >= (VVR_ROUNDSTARTT + VVR_ROUNDTL)"],["sa","{VVR_ROUNDTLE = true;} remoteExec ['BIS_fnc_call',0]; 'ROUND TIME LIMIT ELAPSED!' remoteExec ['systemChat'];"]] call VVM_fnc_createTrigger; // Add trigger for time limit round end condition.
             };
             if (time >= (VVR_ROUNDSTARTT + VVR_PREPTL)) then { VVR_PREPTLE = true; };
