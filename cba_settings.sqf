@@ -12,7 +12,7 @@ TFAR_enableIntercom = TRUE;
 TFAR_objectInterceptionEnabled = FALSE;
 TFAR_spectatorCanHearEnemyUnits = TRUE;
 TFAR_spectatorCanHearFriendlies = TRUE;
-
+/*
 // Encryption code for side.
 // Sides can communicate with the each other if these values are not different!
 tf_west_radio_code = "1";
@@ -34,7 +34,7 @@ tf_freq_east  =   [0 ,7, TFAR_defaultFrequencies_sr_east,0, tf_east_radio_code, 
 tf_freq_east_lr = [0 ,7, TFAR_defaultFrequencies_lr_east,0, tf_east_radio_code, -1, 0,false];
 tf_freq_guer  =   [0 ,7, TFAR_defaultFrequencies_sr_independent,0, tf_guer_radio_code, -1, 0, getPlayerUID player, false];
 tf_freq_guer_lr = [0 ,7, TFAR_defaultFrequencies_lr_independent,0, tf_guer_radio_code, -1, 0,false];
-
+*/
 // STHUD
 STHud_Settings_RemoveDeadViaProximity = TRUE;
 STHud_Settings_Occlusion = TRUE;
@@ -69,10 +69,11 @@ ace_medical_preventInstaDeath = FALSE;
 ace_medical_enableAdvancedWounds = TRUE; // Wound Re-Opening
 ace_medical_level = 2; // 0 = "Disabled", 1 = "Basic", 2 = "Advanced"
 ace_medical_medicSetting = 2; // 0 = Everyone, 1 = Medics are medics, Doctors need param 2 = Medics are Doctors
-
+/*
 ace_medical_fatalDamageSource = 1; // Sum of Trauma death condition
 ace_medical_feedback_painEffectType = 2; // Forced pain effect type to ensure that everyone is handicapped in the same way
 ace_medical_spontaneousWakeUpChance = 0.15; // don't let players wake up too fast
 ace_medical_statemachine_cardiacArrestTime = 300; // players should die fast once they are down and not treated
 ace_medical_treatment_allowSelfStitch = 1;
 ace_medical_treatment_clearTraumaAfterBandage = true; // to increase the flow of the PvP match (reduce limping)
+*/

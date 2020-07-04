@@ -99,16 +99,17 @@ if (modVVRushSwitch == 1) then {
                 {_current = _this select 4; _total = _this select 5; _progress = round ((_current / _total) * 100);
                 _string = format ["BOMB IS BEING DEFUSED! %1%2 COMPLETE!",_progress,"%"];
                 _string remoteExec ["systemChat"];
-                /*
-                playSound3D ["A3\Sounds_F\sfx\blip1.wav",_target,true,getPosASL _target,5,1,0];
-                _light = "#lightpoint" createVehicle (getPos _target);
-                _light setLightBrightness 100;
+                _beepfile = [(str missionConfigFile), 0, -15] call BIS_fnc_trimString;
+                _beep = _beepfile + "beep.wav";
+                playSound3D [_beep,_target,true,getPosASL _target,3,1,10];
+                _light = "#lightpoint" createVehicleLocal (getPos _target);
+                _light setLightBrightness 1;
+                _light setLightUseFlare true;
+                _light setLightFlareSize 5;
+                _light setLightFlareMaxDistance 5;
                 _light setLightAmbient [0.5,0.0,0.0];
                 _light setLightColor [0.5,0.0,0.0];
-                _light lightAttachObject [_target,[0,0,0]];
-                sleep 0.5;
-                deleteVehicle _light;
-                */
+                [_light] spawn {sleep 0.5; deleteVehicle (_this select 0);};
                 }, // Code executed on every progress tick.
                 {[_target,3] call BIS_fnc_dataTerminalAnimate; "BOMB DEFUSED!" remoteExec ["systemChat"]; {VVR_DEFUSED = true;} remoteExec ["BIS_fnc_call",0];}, // Code executed on completion.
                 {[_target,0] call BIS_fnc_dataTerminalAnimate; "BOMB DEFUSAL INTERRUPTED!" remoteExec ["systemChat"];}, // Code executed on interrupted.
