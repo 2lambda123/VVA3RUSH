@@ -72,7 +72,7 @@ if (modVVRushSwitch == 1) then {
               "ROUND PREPARATION PHASE STARTED!" remoteExec ["systemChat"];
               VVR_ROUNDSTARTT = time;
               VVR_ROUNDSTART = true;
-              VVR_Positions = 0;
+              VVR_Positions = [];
               while {count VVR_Positions < 1} do {
                 VVR_ObjLoc = selectRandom VVR_ObjLocs;
                 VVR_Positions = [VVR_ObjLoc] call BIS_fnc_buildingPositions; // count building locations
@@ -145,6 +145,7 @@ if (modVVRushSwitch == 1) then {
           case 3: { // Preparing next round or ending mission.
             if (VVR_ROUNDS < VVR_ROUNDSL) then {
               'PREPARING NEXT ROUND!' remoteExec ["systemChat"];
+              ["Terminate"] remoteExec ["BIS_fnc_EGSpectator",0];
               {forceRespawn _x} forEach allDead;
               { if ((side _x) == East) then {_x setPos getMarkerPos "respawn_east"};} forEach allPlayers; // Move east to respawn east location.
               { if ((side _x) == West) then {_x setPos getMarkerPos "respawn_west"};} forEach allPlayers; // Move west to respawn west location.
