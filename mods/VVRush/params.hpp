@@ -54,8 +54,8 @@ class modVVRushASDistanceSwitch {
 };
 class modVVRushLocationSwitch {
   title    = "VVRush Module: Location Selection Type";
-  values[] = {0,1,2,4};
-  texts[]  = {"Random","Static","List","Single"};
+  values[] = {0,1};
+  texts[]  = {"Random","Static"};
   default  = 0;
 };
 class modVVRushSpacer {

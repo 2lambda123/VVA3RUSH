@@ -34,6 +34,7 @@ if (modVVRushSwitch == 1) then {
     VVR_ROUNDSTARTT = 0; // Round Start Time Counter
     VVR_MARKERS = modVVRushMarkerSwitch; // Map Marker Behaviour Switch
     VVR_ATTDIST = modVVRushASDistanceSwitch;
+    VVR_LOCSWITCH = modVVRushLocationSwitch;
     {["Preload"] call BIS_fnc_arsenal;} remoteExec ["BIS_fnc_call",0,true];
     if (modVVRushArsenalSwitch == 0) then {
       [EAMMO,["Arsenal",{["Open",true] call BIS_fnc_arsenal;}]] remoteExec ["addAction",0,true]; // Add east arsenal.
@@ -72,13 +73,14 @@ if (modVVRushSwitch == 1) then {
               "ROUND PREPARATION PHASE STARTED!" remoteExec ["systemChat"];
               VVR_ROUNDSTARTT = time;
               VVR_ROUNDSTART = true;
-              VVR_Positions = [];
-              while {count VVR_Positions < 1} do {
-                VVR_ObjLoc = selectRandom VVR_ObjLocs;
-                VVR_Positions = [VVR_ObjLoc] call BIS_fnc_buildingPositions;
+              if (isNil "VVR_Positions") then {
+                VVR_Positions = [];
+                while {count VVR_Positions < 1} do {
+                  VVR_ObjLoc = selectRandom VVR_ObjLocs;
+                  VVR_Positions = [VVR_ObjLoc] call BIS_fnc_buildingPositions;
+                };
+                VVR_ObjLoc = selectRandom VVR_Positions;
               };
-              VVR_ObjLoc = selectRandom VVR_Positions;
-              VVR_ObjMarker = [["n","ObjMarker"],["p",VVR_ObjLoc],["c",11]] call VVM_fnc_createMarker; // create a marker
               /* _posCaller = getPosATL VVR_ObjBuilding; //_posCaller = getPosATL _caller;
               _lineStartZ = (_posCaller select 2) + 0.1;
               _lineEndZ = (_posCaller select 2) - 0.2;
@@ -97,6 +99,7 @@ if (modVVRushSwitch == 1) then {
                 {_current = _this select 4; _total = _this select 5; _progress = round ((_current / _total) * 100);
                 _string = format ["BOMB IS BEING DEFUSED! %1%2 COMPLETE!",_progress,"%"];
                 _string remoteExec ["systemChat"];
+                /*
                 playSound3D ["A3\Sounds_F\sfx\blip1.wav",_target,true,getPosASL _target,5,1,0];
                 _light = "#lightpoint" createVehicle (getPos _target);
                 _light setLightBrightness 100;
@@ -105,16 +108,30 @@ if (modVVRushSwitch == 1) then {
                 _light lightAttachObject [_target,[0,0,0]];
                 sleep 0.5;
                 deleteVehicle _light;
+                */
                 }, // Code executed on every progress tick.
                 {[_target,3] call BIS_fnc_dataTerminalAnimate; "BOMB DEFUSED!" remoteExec ["systemChat"]; {VVR_DEFUSED = true;} remoteExec ["BIS_fnc_call",0];}, // Code executed on completion.
                 {[_target,0] call BIS_fnc_dataTerminalAnimate; "BOMB DEFUSAL INTERRUPTED!" remoteExec ["systemChat"];}, // Code executed on interrupted.
                 [], // Arguments passed to the scripts as _this select 3.
                 VVR_DEFUSET,0,true,false
               ] remoteExec ["BIS_fnc_holdActionAdd",0,true]; // Add defuse objective action.
-              VVR_DefPos = [getMarkerPos VVR_ObjMarker, 1, 10, 1, 0, 20, 0] call BIS_fnc_findSafePos;
-              VVR_DefMarker = [["n","DefMarker"],["p",VVR_DefPos],["c",9]] call VVM_fnc_createMarker; // create a marker
-              VVR_AttPos = [getMarkerPos VVR_ObjMarker, VVR_ATTDIST, VVR_ATTDIST + 100, 1, 0, 20, 0] call BIS_fnc_findSafePos;
-              VVR_AttMarker = [["n","AttMarker"],["p",VVR_AttPos],["c",2]] call VVM_fnc_createMarker; // create a marker
+              VVR_DefPos = [getPos VVR_Obj, 1, 10, 1, 0, 20, 0] call BIS_fnc_findSafePos;
+              VVR_AttPos = [getPos VVR_Obj, VVR_ATTDIST, VVR_ATTDIST + 100, 1, 0, 20, 0] call BIS_fnc_findSafePos;
+              switch (VVR_MARKERS) do {
+                case 0: {};
+                case 1: {
+                  _newPos = [(VVR_ObjLoc select 0) + floor random 50,(VVR_ObjLoc select 1) + floor random 50,0];
+                  VVR_ObjMarker = [["n","ObjMarker"],["p",_newPos],["c",9],["sh",2],["s",[100,100]],["b",3],["a",0.5]] call VVM_fnc_createMarker;
+                  _newAttPos = [(VVR_AttPos select 0) + floor random 25,(VVR_AttPos select 1) + floor random 25,0];
+                  VVR_AttMarker = [["n","ObjMarker"],["p",_newAttPos],["c",2],["sh",2],["s",[50,50]],["b",3],["a",0.5]] call VVM_fnc_createMarker;
+                  };
+                case 2: {
+                  VVR_ObjMarker = [["n","ObjMarker"],["p",VVR_ObjLoc],["c",11]] call VVM_fnc_createMarker;
+                  VVR_DefMarker = [["n","DefMarker"],["p",VVR_DefPos],["c",9]] call VVM_fnc_createMarker;
+                  VVR_AttMarker = [["n","AttMarker"],["p",VVR_AttPos],["c",2]] call VVM_fnc_createMarker;
+                };
+                default {};
+              };
               { if ((side _x) == East) then {_x setPos VVR_DefPos};} forEach allUnits; // Move defenders to location.
               VVR_Trg1 = [["p",VVR_DefPos],["sc","[VVR_DEFUSED,true] call BIS_fnc_areEqual"]] call VVM_fnc_createTrigger; // Add trigger for bomb defusal round end condition.
               VVR_Trg2 = [["p",VVR_DefPos],["rx",10000],["ry",10000],["ab",1],["at",1],["sa","{VVR_EDEAD = true;} remoteExec ['BIS_fnc_call',0]; 'DEFENDERS ELIMINATED!' remoteExec ['systemChat'];"]] call VVM_fnc_createTrigger; // Add trigger for all defenders dead round end condition.
@@ -132,11 +149,13 @@ if (modVVRushSwitch == 1) then {
             if ([VVR_EDEAD,true] call BIS_fnc_areEqual || [VVR_WDEAD,true] call BIS_fnc_areEqual || [VVR_DEFUSED,true] call BIS_fnc_areEqual || [VVR_ROUNDTLE,true] call BIS_fnc_areEqual) then {
               VVR_AttPos = nil;
               VVR_DefPos = nil;
-              VVR_ObjLoc = nil;
-              VVR_Positions = nil;
-              deleteMarker "AttMarker";
-              deleteMarker "DefMarker";              
-              deleteMarker "ObjMarker";
+              if (VVR_LOCSWITCH == 0) then {VVR_Positions = nil; VVR_ObjLoc = nil;};
+              switch (VVR_MARKERS) do {
+                case 0: {};
+                case 1: {deleteMarker "ObjMarker"; deleteMarker "AttMarker";};
+                case 2: {deleteMarker "AttMarker"; deleteMarker "DefMarker"; deleteMarker "ObjMarker";};
+                default {};
+              };
               deleteVehicle VVR_Obj;
               deleteVehicle VVR_Trg1;
               deleteVehicle VVR_Trg2;
