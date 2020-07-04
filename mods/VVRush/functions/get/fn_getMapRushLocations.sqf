@@ -221,16 +221,6 @@ _livonia = [
   "Land_Sawmill_01_F",
   "Land_VillageStore_01_F"
 ];
-_chernarus = [
-  "Land_Mil_Barracks",
-  "Land_Mil_Barracks_i",
-  "Land_Mil_ControlTower",
-  "Land_Mil_House"
-];
-_takistan = [
-  "Land_Mil_Barracks_i_EP1",
-  "Land_Mil_House_EP1"
-];
 _weferlingen = [
   "land_gm_euro_barracks_01_win",
   "land_gm_euro_barracks_01",
@@ -271,6 +261,18 @@ _cup = [
   "Land_Barrack2",
   "Land_Budova4"
 ];
+_chernarus = [
+  "Land_Mil_Barracks",
+  "Land_Mil_Barracks_i",
+  "Land_Mil_ControlTower",
+  "Land_Mil_House"
+];
+_chernarus = _chernarus + _cup;
+_takistan = [
+  "Land_Mil_Barracks_i_EP1",
+  "Land_Mil_House_EP1"
+];
+_takistan = _takistan + _cup;
 _unknown = [
   "Land_A_GeneralStore_01a",
   "Land_a_stationhouse",
