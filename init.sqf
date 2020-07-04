@@ -60,4 +60,7 @@ call compile preprocessfilelinenumbers 'scripts\briefing.sqf';
 		};			
 	}];
 };
+if (isClass (configFile >> "CfgPatches" >> "task_force_radio_items")) then {
+	null = execVM "scripts\tfar_settings.sqf";
+};
 {call compile format["call compile preprocessfilelinenumbers 'mods\%1\init.sqf';",_x];} forEach MODS;
