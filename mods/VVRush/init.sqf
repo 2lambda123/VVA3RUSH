@@ -100,7 +100,7 @@ if (modVVRushSwitch == 1) then {
                 _string = format ["BOMB IS BEING DEFUSED! %1%2 COMPLETE!",_progress,"%"];
                 _string remoteExec ["systemChat"];
                 _beepfile = [(str missionConfigFile), 0, -15] call BIS_fnc_trimString;
-                _beep = _beepfile + "beep.wav";
+                _beep = _beepfile + "beep.ogg";
                 playSound3D [_beep,_target,true,getPosASL _target,3,1,10];
                 _light = "#lightpoint" createVehicleLocal (getPos _target);
                 _light setLightBrightness 1;
