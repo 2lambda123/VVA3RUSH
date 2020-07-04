@@ -18,14 +18,10 @@ A team deathmatch mission for 64 players where defenders protect a bomb that att
 * OBJECTIVE TYPES (Static Sequential List, Random Dynamic List)
 * SCRIPT INITIAL SPAWN LOCATION ASSETS
 * ROUND & PLAYER STATS
-* REVIVE
-* RESPAWN
-* SPECTATOR
-* ACE MEDICAL
+* REVIVE / ACE MEDICAL
 * Weather conditions for each stage of a round.
 * Create functions for location seletion and objective spawning and removal.
 * Loudouts. Roles.
-* Defusal Siren Sound & Flashing Light.
 * Vehicle Garage for Attackers if they spawn too far from objective.
 * Add paramaters for setting marker behaviour.
 * Let Defenders see next objective location before round starts.
