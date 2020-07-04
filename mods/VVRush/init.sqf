@@ -123,7 +123,7 @@ if (modVVRushSwitch == 1) then {
                   _newPos = [(VVR_ObjLoc select 0) + floor random 50,(VVR_ObjLoc select 1) + floor random 50,0];
                   VVR_ObjMarker = [["n","ObjMarker"],["p",_newPos],["c",9],["sh",2],["s",[100,100]],["b",3],["a",0.5]] call VVM_fnc_createMarker;
                   _newAttPos = [(VVR_AttPos select 0) + floor random 25,(VVR_AttPos select 1) + floor random 25,0];
-                  VVR_AttMarker = [["n","ObjMarker"],["p",_newAttPos],["c",2],["sh",2],["s",[50,50]],["b",3],["a",0.5]] call VVM_fnc_createMarker;
+                  VVR_AttMarker = [["n","AttMarker"],["p",_newAttPos],["c",2],["sh",2],["s",[50,50]],["b",3],["a",0.5]] call VVM_fnc_createMarker;
                   };
                 case 2: {
                   VVR_ObjMarker = [["n","ObjMarker"],["p",VVR_ObjLoc],["c",11]] call VVM_fnc_createMarker;

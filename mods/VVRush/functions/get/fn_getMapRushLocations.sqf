@@ -259,21 +259,7 @@ _weferlingen = [
 _pkl = ["Land_rhspkl_hut_01","Land_rhspkl_hut_02","Land_rhspkl_hut_03","Land_rhspkl_hut_04","Land_rhspkl_hut_05","Land_rhspkl_hut_06","Land_rhspkl_hut_07","Land_rhspkl_hut_08"];
 _cup = [
   "Land_Barrack2",
-  "Land_Budova4"
-];
-_chernarus = [
-  "Land_Mil_Barracks",
-  "Land_Mil_Barracks_i",
-  "Land_Mil_ControlTower",
-  "Land_Mil_House"
-];
-_chernarus = _chernarus + _cup;
-_takistan = [
-  "Land_Mil_Barracks_i_EP1",
-  "Land_Mil_House_EP1"
-];
-_takistan = _takistan + _cup;
-_unknown = [
+  "Land_Budova4",
   "Land_A_GeneralStore_01a",
   "Land_a_stationhouse",
   "Land_Barn_Metal",
@@ -301,6 +287,18 @@ _unknown = [
   "Land_Stodola_old_open",
   "Land_Vysilac_budova"
 ];
+_chernarus = [
+  "Land_Mil_Barracks",
+  "Land_Mil_Barracks_i",
+  "Land_Mil_ControlTower",
+  "Land_Mil_House"
+];
+_chernarus = _chernarus + _cup;
+_takistan = [
+  "Land_Mil_Barracks_i_EP1",
+  "Land_Mil_House_EP1"
+];
+_takistan = _takistan + _cup;
 _classnames = [];
 switch (toLowerANSI worldName) do {
   case "altis": {_classnames = _classnames + _altis};
