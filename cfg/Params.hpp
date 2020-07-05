@@ -12,7 +12,7 @@ class Params { // https://community.bistudio.com/wiki/Arma_3_Mission_Parameters
     texts[] = {" "};
     default = 0;
   };
-  #include "\a3\Functions_F\Params\paramRevive.hpp"
+  // #include "\a3\Functions_F\Params\paramRevive.hpp"
   class modDebugSpacer2 {
     title = " ";
     values[] = {0};
