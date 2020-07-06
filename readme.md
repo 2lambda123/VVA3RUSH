@@ -39,13 +39,6 @@ A team deathmatch mission for 64 players where defenders protect a bomb that att
 * Orbat Markers.
 * Stat Markers.
 
-## Modules
+## ATTRIBUTION & THANKS
 
-* [FTPP]
-* [JIPTP]
-* [RandomWeather]
-* [SHK]
-* [VVDT]
-* [VVLO]
-* [VVM]
-* [VVRush]
+* [Winseros for PBOManager](https://github.com/winseros/PBOManager)
